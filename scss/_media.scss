@@ -1,0 +1,273 @@
+/* MOBILE */
+
+/* INICIO */
+
+@media (max-width: 576px) {
+    header.header-index {
+        div.barra-superior {
+            padding: 0.5vh 0vw;
+            div.barra-superior1 {
+                gap: 1vw;
+                img.gmail-superior {
+                    width: 2vw;
+                }
+                p.gmail-superior {
+                    font-size: 1.5vw;
+                    margin: 0vw;
+                }
+            }
+            div.barra-superior2 {
+                width: 100%;
+                gap: 1vw;
+                img.envio-gratis {
+                    width: 2vw;
+                }
+                p.envio-gratis {
+                    font-size: 1.5vw;
+                    margin: 0vw;
+                }
+            }
+            div.barra-superior3 {
+                width: 100%;
+                gap: 1vw;
+                img.wpp-superior {
+                    width: 2vw;
+                }
+                p.wpp-superior {
+                    font-size: 1.5vw;
+                    margin: 0vw;
+                }
+            }
+        }
+        div.header2 {
+            padding: 2vh 0vw 2vh 0vw;
+            img.logo {
+                 width: 10vw;
+            }
+
+            input.header {
+                font-size: 1.5vw;
+                padding: 0.5vh 0vw 0.5vh 0vw;
+                border-radius: 4vw;
+            }
+            div.inicio-sesion {
+                width: 70%;
+                gap: 1vw;
+                justify-content: end;
+                img.inicio-sesion {
+                    width: 2.5vw;
+                }
+                p.inicio-sesion {
+                    font-size: 1.5vw;
+                    margin: 0vw;
+                }
+            }
+            div.mi-compra {
+                width: 50%;
+                gap: 1vw;
+                img.carrito {
+                    width: 2.5vw;
+                }
+                p.carrito {
+                    font-size: 1.5vw;
+                    margin: 0vw;
+                }
+            }
+        }
+    
+        nav.nav {
+            padding: 1vh 0vw 1vh 0vw;
+            ul.nav {
+                width: 100%;
+                li.nav {
+                    font-size: 1.8vw;
+                }
+            }
+        }
+    }
+    
+    img.img-carousel {
+        height: 40vw;
+    }
+    
+    h3.lo-mas-vendido {
+        font-size: 3vw;
+        padding: 5vh 0vw 5vh 0vw;
+    }
+    
+    section.cambio {
+        padding: 10vh 0vw 10vh 0vw;
+        div.cambio0 {
+            div.cambio {
+                width: 100%;
+                img.cambio {
+                    width: 100%;
+                }
+            }
+            div.cambio2 {
+                width: 100%;
+                gap: 2rem;
+                h3.cambio strong {
+                    font-size: 4.5vw;
+                }
+                h4.cambio {
+                    font-size: 2vw;
+                }
+            }
+        }
+        div.centrarnos {
+            margin: 5vh 0vw 0vh 0vw;
+            padding: 2vh 0vw 2vh 0vw;
+            h2.centrarnos strong {
+                font-size: 1.8vw;
+            }
+            h3.centrarnos {
+                font-size: 1.8vw;
+            }
+            h4.centrarnos strong {
+                font-size: 1.8vw;
+            }
+            h5.centrarnos {
+                font-size: 1.8vw;
+            }
+        }
+    }
+    
+    
+    .slider{
+        width: 90%;
+        .slide-track {
+            animation: scroll 40s linear infinite;
+            -webkit-animation: scroll 40s linear infinite;
+            width: calc(15vw * 14);
+            .slide {
+                width: 15vw;
+                padding: 0vh 4vw;
+                img.logos-index {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+    
+    
+    footer.footer {
+        margin: 10vh 0vw 0vh 0vw;
+        div.footer {
+            padding: 3vh 0vw;
+            div.logo-footer {
+                width: 100%;
+                img.img-logo-footer {
+                    width: 15vw;
+                }
+            }
+            div.nosotros-foot {
+                padding: 0vh 0vw 0vh 10vw;
+                h3.secciones-foot strong {
+                    font-size: 2vw;
+                }
+                h4.secciones-foot {
+                    font-size: 1.5vw;
+                }
+            }
+            div.precios-justos-footer {
+                width: 100%;
+                img.precios-justos {
+                    width: 15vw;
+                }
+            }
+            div.redes-footer {
+                flex-direction: column;
+                gap: 1vw;
+                align-items: center;
+                img.redes-foot {
+                    width: 5vw;
+                }
+            }
+        }
+        div.footer-finishline-argentina {
+            width: 100%;
+            h5.footer-finishline-argentina {
+                font-size: 0.8vw;
+            }
+        }
+    }
+
+
+
+
+
+    
+    /* HOMBRE */
+
+    div.messi {
+        video.messi {
+            width: 100%;
+        }
+    }
+    
+    h2.recomendados {
+        padding: 10vh 0vw 5vh 0vw;
+        font-size: 3vw;
+    }
+    
+    section.productos {
+        width: 100%;
+        gap: 10vw;
+        div.productos-1 {
+            width: 100%;
+            padding: 0vh 2vw;
+            gap: 5vw;
+            div.productos {
+                width: 30vw;
+                padding: 1vw;
+                box-shadow: 0vh 0vw 0.5vh 0.5vw rgba(0, 0, 0, 0.097);
+                &:hover {
+                    transform: scale(1.01);
+                    transition: 1s;
+                }
+                img.productos {
+                    width: 100%;
+                }
+                h3.productos {
+                    padding: 1vh 0vw 0vh 0vw;
+                    font-size: 1.8vw;
+                }
+                h4.productos {
+                    padding: 2vh 0vw 0vh 0vw;
+                    margin: 0vw;
+                    font-size: 1.2vw;
+                }
+            }
+        }
+    }
+
+
+
+    /* MUJER */
+
+    div.cancha-verde {
+        padding: 8vh 30vw 8vh 8vw;
+        gap: 1.5vw;
+        img.cancha-verde {
+            width: 10vw;
+        }
+        h1.cancha-verde strong {
+            font-size: 3vw;
+        }
+        h2.cancha-verde {
+            font-size: 2vw;
+        }
+    }
+
+
+    /* NIÑOS */
+
+    div.chicos-posando {
+        box-shadow: 0vw 1vw 1vw rgba(0, 0, 0, 0.136);
+        img.chicos-posando {
+            width: 90%;
+        }
+    }
+}

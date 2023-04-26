@@ -1,0 +1,32 @@
+*{
+    margin: 0px 0px;
+    padding: 0px 0px;
+    box-sizing: border-box;
+    font-size: 10px;
+    @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
+}
+
+
+/* KEYFRAMES */
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translate(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-15rem * 7));
+        transform: translate(calc(-15rem * 7));
+    }
+}
+
+
+
+/* IMPORT */
+
+@import "index";
+@import "hombre";
+@import "mujer";
+@import "ninos";
+
+@import "media";

@@ -1,0 +1,645 @@
+@charset "UTF-8";
+* {
+  margin: 0px 0px;
+  padding: 0px 0px;
+  box-sizing: border-box;
+  font-size: 10px;
+  @import url("https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap");
+}
+
+/* KEYFRAMES */
+@keyframes scroll {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(-105rem);
+  }
+}
+/* IMPORT */
+/* INICIO */
+header.header-index div.barra-superior {
+  position: sticky;
+  top: 0%;
+  background-color: rgba(128, 128, 128, 0.927);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0rem;
+}
+header.header-index div.barra-superior div.barra-superior1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+header.header-index div.barra-superior div.barra-superior1 img.gmail-superior {
+  width: 2rem;
+}
+header.header-index div.barra-superior div.barra-superior1 p.gmail-superior {
+  font-size: 1.5rem;
+  margin: 0rem;
+  color: white;
+}
+header.header-index div.barra-superior div.barra-superior2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+header.header-index div.barra-superior div.barra-superior2 img.envio-gratis {
+  width: 2rem;
+}
+header.header-index div.barra-superior div.barra-superior2 p.envio-gratis {
+  font-size: 1.5rem;
+  margin: 0rem;
+  color: white;
+}
+header.header-index div.barra-superior div.barra-superior3 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+header.header-index div.barra-superior div.barra-superior3 img.wpp-superior {
+  width: 2rem;
+}
+header.header-index div.barra-superior div.barra-superior3 p.wpp-superior {
+  font-size: 1.5rem;
+  margin: 0rem;
+  color: white;
+}
+header.header-index div.header2 {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 0rem 2rem 0rem;
+  justify-content: space-around;
+  align-items: center;
+}
+header.header-index div.header2 a {
+  text-decoration: none;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+header.header-index div.header2 a img.logo {
+  width: 10rem;
+}
+header.header-index div.header2 input.header {
+  display: flex;
+  width: 80%;
+  font-size: 1.5rem;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  border-radius: 4rem;
+  border: white solid;
+}
+header.header-index div.header2 div.inicio-sesion {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 1rem;
+}
+header.header-index div.header2 div.inicio-sesion img.inicio-sesion {
+  width: 2.5rem;
+}
+header.header-index div.header2 div.inicio-sesion p.inicio-sesion {
+  font-size: 1.5rem;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  margin: 0rem;
+}
+header.header-index div.header2 div.mi-compra {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+header.header-index div.header2 div.mi-compra img.carrito {
+  width: 2.5rem;
+}
+header.header-index div.header2 div.mi-compra p.carrito {
+  font-size: 1.5rem;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  margin: 0rem;
+}
+header.header-index nav.nav {
+  width: 100%;
+  display: flex;
+  padding: 1rem 0rem 1rem 0rem;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+header.header-index nav.nav ul.nav {
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  list-style: none;
+}
+header.header-index nav.nav ul.nav a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header.header-index nav.nav ul.nav li.nav {
+  display: flex;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.8rem;
+  color: black;
+}
+header.header-index nav.nav ul.nav li.nav:hover {
+  transform: scale(1.05);
+  transition: 1s;
+  color: rgb(108, 0, 0);
+}
+
+img.img-carousel {
+  width: 100%;
+  height: 50rem;
+}
+
+h3.lo-mas-vendido {
+  font-family: "Raleway", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  padding: 5rem 0rem 5rem 0rem;
+}
+
+section.cambio {
+  padding: 10rem 0rem 10rem 0rem;
+}
+section.cambio div.cambio0 {
+  display: flex;
+}
+section.cambio div.cambio0 div.cambio {
+  width: 100%;
+}
+section.cambio div.cambio0 div.cambio img.cambio {
+  width: 100%;
+}
+section.cambio div.cambio0 div.cambio2 {
+  background-color: rgba(62, 62, 62, 0.068);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+section.cambio div.cambio0 div.cambio2 h3.cambio strong {
+  color: black;
+  display: flex;
+  font-size: 4.5rem;
+  text-align: center;
+}
+section.cambio div.cambio0 div.cambio2 h4.cambio {
+  font-size: 2rem;
+  text-align: center;
+}
+section.cambio div.centrarnos {
+  background-color: rgba(62, 62, 62, 0.068);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 0rem 0rem 0rem;
+  padding: 2rem 0rem 2rem 0rem;
+}
+section.cambio div.centrarnos h2.centrarnos strong {
+  font-size: 1.8rem;
+}
+section.cambio div.centrarnos h3.centrarnos {
+  font-size: 1.8rem;
+}
+section.cambio div.centrarnos h4.centrarnos strong {
+  font-size: 1.8rem;
+}
+section.cambio div.centrarnos h5.centrarnos {
+  font-size: 1.8rem;
+}
+
+.slider {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+}
+.slider .slide-track {
+  display: flex;
+  animation: scroll 40s linear infinite;
+  -webkit-animation: scroll 40s linear infinite;
+  width: 210rem;
+}
+.slider .slide-track .slide {
+  width: 15rem;
+  padding: 0rem 4rem;
+}
+.slider .slide-track .slide img.logos-index {
+  width: 100%;
+}
+
+footer.footer {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  margin: 10rem 0rem 0rem 0rem;
+}
+footer.footer div.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 3rem 0rem;
+}
+footer.footer div.footer div.logo-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+footer.footer div.footer div.logo-footer img.img-logo-footer {
+  width: 15rem;
+}
+footer.footer div.footer div.nosotros-foot {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 0rem 0rem 10rem;
+}
+footer.footer div.footer div.nosotros-foot h3.secciones-foot strong {
+  color: white;
+  font-size: 2rem;
+}
+footer.footer div.footer div.nosotros-foot a {
+  text-decoration: none;
+}
+footer.footer div.footer div.nosotros-foot h4.secciones-foot {
+  color: rgba(255, 255, 255, 0.81);
+  font-size: 1.5rem;
+}
+footer.footer div.footer div.precios-justos-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+footer.footer div.footer div.precios-justos-footer img.precios-justos {
+  width: 15rem;
+}
+footer.footer div.footer div.redes-footer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: start;
+}
+footer.footer div.footer div.redes-footer img.redes-foot {
+  width: 5rem;
+}
+footer.footer div.footer-finishline-argentina {
+  width: 100%;
+}
+footer.footer div.footer-finishline-argentina h5.footer-finishline-argentina {
+  color: rgba(255, 255, 255, 0.66);
+  text-align: center;
+  font-size: 1rem;
+}
+
+div.messi video.messi {
+  width: 100%;
+  height: auto;
+}
+
+h2.recomendados {
+  text-align: center;
+  padding: 10rem 0rem 5rem 0rem;
+  font-size: 3rem;
+}
+
+section.productos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Raleway", sans-serif;
+  justify-content: center;
+  gap: 10rem;
+}
+section.productos div.productos-1 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0rem 0rem;
+  gap: 5rem;
+}
+section.productos div.productos-1 div.productos {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  box-shadow: 0rem 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.097);
+}
+section.productos div.productos-1 div.productos:hover {
+  transform: scale(1.01);
+  transition: 1s;
+}
+section.productos div.productos-1 div.productos img.productos {
+  display: flex;
+  width: 100%;
+}
+section.productos div.productos-1 div.productos h3.productos {
+  display: flex;
+  padding: 1rem 0rem 0rem 0rem;
+  font-size: 1.8rem;
+}
+section.productos div.productos-1 div.productos h4.productos {
+  display: flex;
+  padding: 2rem 0rem 0rem 0rem;
+  margin: 0rem;
+  font-size: 1.2rem;
+}
+
+div.cancha-verde {
+  background-image: url(../img/cancha-verde-adidas.webp);
+  background-size: 100% 100%;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  padding: 8rem 100rem 8rem 8rem;
+  gap: 1.5rem;
+}
+div.cancha-verde img.cancha-verde {
+  width: 10rem;
+}
+div.cancha-verde h1.cancha-verde strong {
+  color: white;
+  font-size: 3rem;
+}
+div.cancha-verde h2.cancha-verde {
+  font-size: 2rem;
+  color: white;
+}
+
+div.chicos-posando {
+  width: 100%;
+  box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.136);
+  text-align: center;
+}
+div.chicos-posando img.chicos-posando {
+  width: 90%;
+  height: auto;
+}
+
+/* MOBILE */
+/* INICIO */
+@media (max-width: 576px) {
+  header.header-index div.barra-superior {
+    padding: 0.5vh 0vw;
+  }
+  header.header-index div.barra-superior div.barra-superior1 {
+    gap: 1vw;
+  }
+  header.header-index div.barra-superior div.barra-superior1 img.gmail-superior {
+    width: 2vw;
+  }
+  header.header-index div.barra-superior div.barra-superior1 p.gmail-superior {
+    font-size: 1.5vw;
+    margin: 0vw;
+  }
+  header.header-index div.barra-superior div.barra-superior2 {
+    width: 100%;
+    gap: 1vw;
+  }
+  header.header-index div.barra-superior div.barra-superior2 img.envio-gratis {
+    width: 2vw;
+  }
+  header.header-index div.barra-superior div.barra-superior2 p.envio-gratis {
+    font-size: 1.5vw;
+    margin: 0vw;
+  }
+  header.header-index div.barra-superior div.barra-superior3 {
+    width: 100%;
+    gap: 1vw;
+  }
+  header.header-index div.barra-superior div.barra-superior3 img.wpp-superior {
+    width: 2vw;
+  }
+  header.header-index div.barra-superior div.barra-superior3 p.wpp-superior {
+    font-size: 1.5vw;
+    margin: 0vw;
+  }
+  header.header-index div.header2 {
+    padding: 2vh 0vw 2vh 0vw;
+  }
+  header.header-index div.header2 img.logo {
+    width: 10vw;
+  }
+  header.header-index div.header2 input.header {
+    font-size: 1.5vw;
+    padding: 0.5vh 0vw 0.5vh 0vw;
+    border-radius: 4vw;
+  }
+  header.header-index div.header2 div.inicio-sesion {
+    width: 70%;
+    gap: 1vw;
+    justify-content: end;
+  }
+  header.header-index div.header2 div.inicio-sesion img.inicio-sesion {
+    width: 2.5vw;
+  }
+  header.header-index div.header2 div.inicio-sesion p.inicio-sesion {
+    font-size: 1.5vw;
+    margin: 0vw;
+  }
+  header.header-index div.header2 div.mi-compra {
+    width: 50%;
+    gap: 1vw;
+  }
+  header.header-index div.header2 div.mi-compra img.carrito {
+    width: 2.5vw;
+  }
+  header.header-index div.header2 div.mi-compra p.carrito {
+    font-size: 1.5vw;
+    margin: 0vw;
+  }
+  header.header-index nav.nav {
+    padding: 1vh 0vw 1vh 0vw;
+  }
+  header.header-index nav.nav ul.nav {
+    width: 100%;
+  }
+  header.header-index nav.nav ul.nav li.nav {
+    font-size: 1.8vw;
+  }
+  img.img-carousel {
+    height: 40vw;
+  }
+  h3.lo-mas-vendido {
+    font-size: 3vw;
+    padding: 5vh 0vw 5vh 0vw;
+  }
+  section.cambio {
+    padding: 10vh 0vw 10vh 0vw;
+  }
+  section.cambio div.cambio0 div.cambio {
+    width: 100%;
+  }
+  section.cambio div.cambio0 div.cambio img.cambio {
+    width: 100%;
+  }
+  section.cambio div.cambio0 div.cambio2 {
+    width: 100%;
+    gap: 2rem;
+  }
+  section.cambio div.cambio0 div.cambio2 h3.cambio strong {
+    font-size: 4.5vw;
+  }
+  section.cambio div.cambio0 div.cambio2 h4.cambio {
+    font-size: 2vw;
+  }
+  section.cambio div.centrarnos {
+    margin: 5vh 0vw 0vh 0vw;
+    padding: 2vh 0vw 2vh 0vw;
+  }
+  section.cambio div.centrarnos h2.centrarnos strong {
+    font-size: 1.8vw;
+  }
+  section.cambio div.centrarnos h3.centrarnos {
+    font-size: 1.8vw;
+  }
+  section.cambio div.centrarnos h4.centrarnos strong {
+    font-size: 1.8vw;
+  }
+  section.cambio div.centrarnos h5.centrarnos {
+    font-size: 1.8vw;
+  }
+  .slider {
+    width: 90%;
+  }
+  .slider .slide-track {
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: 210vw;
+  }
+  .slider .slide-track .slide {
+    width: 15vw;
+    padding: 0vh 4vw;
+  }
+  .slider .slide-track .slide img.logos-index {
+    width: 100%;
+  }
+  footer.footer {
+    margin: 10vh 0vw 0vh 0vw;
+  }
+  footer.footer div.footer {
+    padding: 3vh 0vw;
+  }
+  footer.footer div.footer div.logo-footer {
+    width: 100%;
+  }
+  footer.footer div.footer div.logo-footer img.img-logo-footer {
+    width: 15vw;
+  }
+  footer.footer div.footer div.nosotros-foot {
+    padding: 0vh 0vw 0vh 10vw;
+  }
+  footer.footer div.footer div.nosotros-foot h3.secciones-foot strong {
+    font-size: 2vw;
+  }
+  footer.footer div.footer div.nosotros-foot h4.secciones-foot {
+    font-size: 1.5vw;
+  }
+  footer.footer div.footer div.precios-justos-footer {
+    width: 100%;
+  }
+  footer.footer div.footer div.precios-justos-footer img.precios-justos {
+    width: 15vw;
+  }
+  footer.footer div.footer div.redes-footer {
+    flex-direction: column;
+    gap: 1vw;
+    align-items: center;
+  }
+  footer.footer div.footer div.redes-footer img.redes-foot {
+    width: 5vw;
+  }
+  footer.footer div.footer-finishline-argentina {
+    width: 100%;
+  }
+  footer.footer div.footer-finishline-argentina h5.footer-finishline-argentina {
+    font-size: 0.8vw;
+  }
+  /* HOMBRE */
+  div.messi video.messi {
+    width: 100%;
+  }
+  h2.recomendados {
+    padding: 10vh 0vw 5vh 0vw;
+    font-size: 3vw;
+  }
+  section.productos {
+    width: 100%;
+    gap: 10vw;
+  }
+  section.productos div.productos-1 {
+    width: 100%;
+    padding: 0vh 2vw;
+    gap: 5vw;
+  }
+  section.productos div.productos-1 div.productos {
+    width: 30vw;
+    padding: 1vw;
+    box-shadow: 0vh 0vw 0.5vh 0.5vw rgba(0, 0, 0, 0.097);
+  }
+  section.productos div.productos-1 div.productos:hover {
+    transform: scale(1.01);
+    transition: 1s;
+  }
+  section.productos div.productos-1 div.productos img.productos {
+    width: 100%;
+  }
+  section.productos div.productos-1 div.productos h3.productos {
+    padding: 1vh 0vw 0vh 0vw;
+    font-size: 1.8vw;
+  }
+  section.productos div.productos-1 div.productos h4.productos {
+    padding: 2vh 0vw 0vh 0vw;
+    margin: 0vw;
+    font-size: 1.2vw;
+  }
+  /* MUJER */
+  div.cancha-verde {
+    padding: 8vh 30vw 8vh 8vw;
+    gap: 1.5vw;
+  }
+  div.cancha-verde img.cancha-verde {
+    width: 10vw;
+  }
+  div.cancha-verde h1.cancha-verde strong {
+    font-size: 3vw;
+  }
+  div.cancha-verde h2.cancha-verde {
+    font-size: 2vw;
+  }
+  /* NIÑOS */
+  div.chicos-posando {
+    box-shadow: 0vw 1vw 1vw rgba(0, 0, 0, 0.136);
+  }
+  div.chicos-posando img.chicos-posando {
+    width: 90%;
+  }
+}/*# sourceMappingURL=main.css.map */
