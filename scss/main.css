@@ -205,6 +205,7 @@ section.cambio div.cambio0 div.cambio2 h3.cambio strong {
   text-align: center;
 }
 section.cambio div.cambio0 div.cambio2 h4.cambio {
+  padding: 0rem 2rem;
   font-size: 2rem;
   text-align: center;
 }
@@ -509,6 +510,7 @@ div.chicos-posando img.chicos-posando {
     font-size: 4.5vw;
   }
   section.cambio div.cambio0 div.cambio2 h4.cambio {
+    padding: 0vh 2vw;
     font-size: 2vw;
   }
   section.cambio div.centrarnos {
