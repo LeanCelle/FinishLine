@@ -136,7 +136,8 @@ header.header-index {
                 align-items: center;
             }
             li.nav {
-                display: flex;
+                display: block;
+                flex-direction: column;
                 font-family: 'Raleway', sans-serif;
                 font-size: 1.8rem;
                 color: black;

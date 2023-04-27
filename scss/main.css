@@ -154,7 +154,8 @@ header.header-index nav.nav ul.nav a {
   align-items: center;
 }
 header.header-index nav.nav ul.nav li.nav {
-  display: flex;
+  display: block;
+  flex-direction: column;
   font-family: "Raleway", sans-serif;
   font-size: 1.8rem;
   color: black;
@@ -405,6 +406,18 @@ div.chicos-posando img.chicos-posando {
   height: auto;
 }
 
+div.logo-clubes {
+  background-color: rgb(246, 246, 255);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  padding: 4rem 0rem;
+}
+div.logo-clubes img.clubes {
+  width: 10rem;
+}
+
 /* MOBILE */
 /* INICIO */
 @media (max-width: 576px) {
@@ -643,5 +656,13 @@ div.chicos-posando img.chicos-posando {
   }
   div.chicos-posando img.chicos-posando {
     width: 90%;
+  }
+  /* CLUBES */
+  div.logo-clubes {
+    width: 100%;
+    padding: 4vh 0vw;
+  }
+  div.logo-clubes img.clubes {
+    width: 10vw;
   }
 }/*# sourceMappingURL=main.css.map */
