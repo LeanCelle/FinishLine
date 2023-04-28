@@ -56,7 +56,7 @@ header.header-index {
         }
     }
     div.header2 {
-        background-color: rgb(0, 0, 0);
+        background-color: black;
         display: flex;
         flex-direction: row;
         padding: 2rem 0rem 2rem 0rem;
@@ -120,7 +120,6 @@ header.header-index {
     nav.nav {
         width: 100%;
         display: flex;
-        padding: 1rem 0rem 1rem 0rem;
         align-items: center;
         justify-content: center;
         background-color: white;
@@ -141,10 +140,11 @@ header.header-index {
                 font-family: 'Raleway', sans-serif;
                 font-size: 1.8rem;
                 color: black;
+                padding: 1rem 0rem 1rem 0rem;
                 &:hover {
-                    transform: scale(1.05);
-                    transition: 1s;
-                    color: rgb(108, 0, 0);
+                    transition: 0.5s;
+                    transform:scale(1.05);
+                    color: rgb(102, 0, 0);
                 }
             }
         }
