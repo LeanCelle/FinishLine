@@ -640,11 +640,11 @@ div.logo-clubes img.clubes:hover {
   }
   /* MUJER */
   div.cancha-verde {
-    padding: 8vh 30vw 8vh 8vw;
-    gap: 1.5vw;
+    padding: 5vh 40vw 5vh 8vw;
+    gap: 1vw;
   }
   div.cancha-verde img.cancha-verde {
-    width: 0vw;
+    width: 10vw;
   }
   div.cancha-verde h1.cancha-verde strong {
     font-size: 3vw;
