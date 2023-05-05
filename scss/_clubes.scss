@@ -7,5 +7,9 @@ div.logo-clubes {
     padding: 4rem 0rem;
     img.clubes {
         width: 10rem;
+        &:hover {
+            transition: 1s;
+            transform: scale(1.05);
+        }
     }
 }

@@ -417,6 +417,10 @@ div.logo-clubes {
 div.logo-clubes img.clubes {
   width: 10rem;
 }
+div.logo-clubes img.clubes:hover {
+  transition: 1s;
+  transform: scale(1.05);
+}
 
 /* MOBILE */
 /* INICIO */
@@ -640,7 +644,7 @@ div.logo-clubes img.clubes {
     gap: 1.5vw;
   }
   div.cancha-verde img.cancha-verde {
-    width: 10vw;
+    width: 0vw;
   }
   div.cancha-verde h1.cancha-verde strong {
     font-size: 3vw;
