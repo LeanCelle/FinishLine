@@ -81,6 +81,8 @@ function productos() {
         alert(`Seleccionaste botines Puma por un precio de $${botinesPuma}`)
     }else if (eleccion === "4"){
         alert(`Seleccionaste todos los productos por un precio de $${remeraAdidas + zapatillasNike + botinesPuma}`)
+    }else {
+        console.log(`No seleccionó ningun producto`)
     }
 }
 
@@ -88,11 +90,11 @@ productos()
 
 
 for (finalizarCompra = "no"; finalizarCompra = "si"; finalizarCompra++) {
-    let finalizar = prompt("Desea finalizar su compra? \n SI - NO")
+    let finalizarCompra = prompt("Desea finalizar su compra? \n SI - NO")
 
-    if (finalizar === "no") {
+    if (finalizarCompra === "no") {
         productos()
-    }else if (finalizar === "si") {
+    }else if (finalizarCompra === "si") {
         break
     }else {
         break
