@@ -463,7 +463,7 @@ div.logo-clubes img.clubes:hover {
   header.header-index div.header2 {
     padding: 2vh 0vw 2vh 0vw;
   }
-  header.header-index div.header2 img.logo {
+  header.header-index div.header2 a img.logo {
     width: 10vw;
   }
   header.header-index div.header2 input.header {
