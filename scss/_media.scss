@@ -96,7 +96,7 @@
     }
     
     section.cambio {
-        padding: 10vh 0vw 10vh 0vw;
+        padding: 10vh 0vw 0vh 0vw;
         div.cambio0 {
             div.cambio {
                 width: 100%;
@@ -130,6 +130,26 @@
             }
             h5.centrarnos {
                 font-size: 1.8vw;
+            }
+        }
+    }
+
+    section.app-mockup {
+        gap: 5vw;
+        margin: 10vh 8vw;
+        div.app {
+            gap: 4vw;
+            h4.app {
+                font-size: 3vw;
+            }
+            img.app {
+                width: 15vw;
+                border-radius: 0.5vw;
+            }
+        }
+        div.mockup {
+            img.mockup {
+                width: 30vw;
             }
         }
     }

@@ -179,7 +179,7 @@ h3.lo-mas-vendido {
 }
 
 section.cambio {
-  padding: 10rem 0rem 10rem 0rem;
+  padding: 10rem 0rem 0rem 0rem;
 }
 section.cambio div.cambio0 {
   display: flex;
@@ -230,6 +230,38 @@ section.cambio div.centrarnos h4.centrarnos strong {
 }
 section.cambio div.centrarnos h5.centrarnos {
   font-size: 1.8rem;
+}
+
+section.app-mockup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  margin: 13rem 0rem;
+}
+section.app-mockup div.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+section.app-mockup div.app h4.app {
+  text-align: center;
+  font-size: 3rem;
+}
+section.app-mockup div.app img.app {
+  text-align: center;
+  width: 15rem;
+  border-radius: 0.5rem;
+}
+section.app-mockup div.mockup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.app-mockup div.mockup img.mockup {
+  width: 30rem;
 }
 
 .slider {
@@ -417,10 +449,6 @@ div.logo-clubes {
 div.logo-clubes img.clubes {
   width: 10rem;
 }
-div.logo-clubes img.clubes:hover {
-  transition: 1s;
-  transform: scale(1.05);
-}
 
 /* MOBILE */
 /* INICIO */
@@ -509,7 +537,7 @@ div.logo-clubes img.clubes:hover {
     padding: 5vh 0vw 5vh 0vw;
   }
   section.cambio {
-    padding: 10vh 0vw 10vh 0vw;
+    padding: 10vh 0vw 0vh 0vw;
   }
   section.cambio div.cambio0 div.cambio {
     width: 100%;
@@ -543,6 +571,23 @@ div.logo-clubes img.clubes:hover {
   }
   section.cambio div.centrarnos h5.centrarnos {
     font-size: 1.8vw;
+  }
+  section.app-mockup {
+    gap: 5vw;
+    margin: 10vh 8vw;
+  }
+  section.app-mockup div.app {
+    gap: 4vw;
+  }
+  section.app-mockup div.app h4.app {
+    font-size: 3vw;
+  }
+  section.app-mockup div.app img.app {
+    width: 15vw;
+    border-radius: 0.5vw;
+  }
+  section.app-mockup div.mockup img.mockup {
+    width: 30vw;
   }
   .slider {
     width: 90%;
