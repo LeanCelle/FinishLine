@@ -257,9 +257,9 @@ section.app-mockup {
     overflow: hidden;
     .slide-track {
         display: flex;
-        animation: scroll 40s linear infinite;
-        -webkit-animation: scroll 40s linear infinite;
-        width: calc(15rem * 14);
+        animation: scroll 10s linear infinite;
+        -webkit-animation: scroll 10s linear infinite;
+        width: calc(15rem * 28);
         .slide {
             width: 15rem;
             padding: 0rem 4rem;
@@ -271,12 +271,95 @@ section.app-mockup {
 }
 
 
+section.compra {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10rem;
+    div.compra1 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0rem 4rem;
+        img.compra1 {
+            width: 8rem;
+            height: 8rem;
+            margin-bottom: 1.5rem;
+        }
+        h4.compra1 {
+            color: rgba(0, 0, 0, 0.844);
+            font-size: 3rem;
+            text-align: center;
+        }
+        h5.compra1 {
+            color: rgba(0, 0, 0, 0.588);
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
+    div.compra2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0rem 4rem;
+        img.compra2 {
+            width: 8rem;
+            height: 8rem;
+            margin-bottom: 1.5rem;
+        }
+        h4.compra2 {
+            color: rgba(0, 0, 0, 0.844);
+            font-size: 3rem;
+            text-align: center;
+        }
+        h5.compra2 {
+            color: rgba(0, 0, 0, 0.588);
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
+    div.compra3 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0rem 4rem;
+        img.compra3 {
+            width: 8rem;
+            height: 8rem;
+            margin-bottom: 1.5rem;
+        }
+        h4.compra3 {
+            color: rgba(0, 0, 0, 0.844);
+            font-size: 3rem;
+            text-align: center;
+        }
+        h5.compra3 {
+            color: rgba(0, 0, 0, 0.588);
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
+}
+
+hr {
+    color: rgba(0, 0, 0, 0.581);
+    margin: 10rem 40rem;
+}
+
+
 
 footer.footer {
     background-color: black;
     display: flex;
     flex-direction: column;
-    margin: 10rem 0rem 0rem 0rem;
     div.footer {
         width: 100%;
         display: flex;

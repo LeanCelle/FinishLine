@@ -272,9 +272,9 @@ section.app-mockup div.mockup img.mockup {
 }
 .slider .slide-track {
   display: flex;
-  animation: scroll 40s linear infinite;
-  -webkit-animation: scroll 40s linear infinite;
-  width: 210rem;
+  animation: scroll 10s linear infinite;
+  -webkit-animation: scroll 10s linear infinite;
+  width: 420rem;
 }
 .slider .slide-track .slide {
   width: 15rem;
@@ -284,11 +284,93 @@ section.app-mockup div.mockup img.mockup {
   width: 100%;
 }
 
+section.compra {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10rem;
+}
+section.compra div.compra1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0rem 4rem;
+}
+section.compra div.compra1 img.compra1 {
+  width: 8rem;
+  height: 8rem;
+  margin-bottom: 1.5rem;
+}
+section.compra div.compra1 h4.compra1 {
+  color: rgba(0, 0, 0, 0.844);
+  font-size: 3rem;
+  text-align: center;
+}
+section.compra div.compra1 h5.compra1 {
+  color: rgba(0, 0, 0, 0.588);
+  font-size: 1.5rem;
+  text-align: center;
+}
+section.compra div.compra2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0rem 4rem;
+}
+section.compra div.compra2 img.compra2 {
+  width: 8rem;
+  height: 8rem;
+  margin-bottom: 1.5rem;
+}
+section.compra div.compra2 h4.compra2 {
+  color: rgba(0, 0, 0, 0.844);
+  font-size: 3rem;
+  text-align: center;
+}
+section.compra div.compra2 h5.compra2 {
+  color: rgba(0, 0, 0, 0.588);
+  font-size: 1.5rem;
+  text-align: center;
+}
+section.compra div.compra3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0rem 4rem;
+}
+section.compra div.compra3 img.compra3 {
+  width: 8rem;
+  height: 8rem;
+  margin-bottom: 1.5rem;
+}
+section.compra div.compra3 h4.compra3 {
+  color: rgba(0, 0, 0, 0.844);
+  font-size: 3rem;
+  text-align: center;
+}
+section.compra div.compra3 h5.compra3 {
+  color: rgba(0, 0, 0, 0.588);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+hr {
+  color: rgba(0, 0, 0, 0.581);
+  margin: 10rem 40rem;
+}
+
 footer.footer {
   background-color: black;
   display: flex;
   flex-direction: column;
-  margin: 10rem 0rem 0rem 0rem;
 }
 footer.footer div.footer {
   width: 100%;
@@ -593,9 +675,9 @@ div.logo-clubes img.clubes {
     width: 90%;
   }
   .slider .slide-track {
-    animation: scroll 40s linear infinite;
-    -webkit-animation: scroll 40s linear infinite;
-    width: 210vw;
+    animation: scroll 10s linear infinite;
+    -webkit-animation: scroll 10s linear infinite;
+    width: 420vw;
   }
   .slider .slide-track .slide {
     width: 15vw;
@@ -604,8 +686,88 @@ div.logo-clubes img.clubes {
   .slider .slide-track .slide img.logos-index {
     width: 100%;
   }
-  footer.footer {
-    margin: 10vh 0vw 0vh 0vw;
+  section.compra {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10vw;
+    gap: 2rem;
+  }
+  section.compra div.compra1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1vw;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0vh 15vw;
+  }
+  section.compra div.compra1 img.compra1 {
+    width: 8vw;
+    height: 8vh;
+    margin-bottom: 1.5vw;
+  }
+  section.compra div.compra1 h4.compra1 {
+    color: rgba(0, 0, 0, 0.844);
+    font-size: 3vw;
+    text-align: center;
+  }
+  section.compra div.compra1 h5.compra1 {
+    color: rgba(0, 0, 0, 0.588);
+    font-size: 1.5vw;
+    text-align: center;
+  }
+  section.compra div.compra2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1vw;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0vh 15vw;
+  }
+  section.compra div.compra2 img.compra2 {
+    width: 8vw;
+    height: 8vw;
+    margin-bottom: 1.5vw;
+  }
+  section.compra div.compra2 h4.compra2 {
+    color: rgba(0, 0, 0, 0.844);
+    font-size: 3vw;
+    text-align: center;
+  }
+  section.compra div.compra2 h5.compra2 {
+    color: rgba(0, 0, 0, 0.588);
+    font-size: 1.5vw;
+    text-align: center;
+  }
+  section.compra div.compra3 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1vw;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0vh 15vw;
+  }
+  section.compra div.compra3 img.compra3 {
+    width: 8vw;
+    height: 8vh;
+    margin-bottom: 1.5vw;
+  }
+  section.compra div.compra3 h4.compra3 {
+    color: rgba(0, 0, 0, 0.844);
+    font-size: 3vw;
+    text-align: center;
+  }
+  section.compra div.compra3 h5.compra3 {
+    color: rgba(0, 0, 0, 0.588);
+    font-size: 1.5vw;
+    text-align: center;
+  }
+  hr {
+    color: rgba(0, 0, 0, 0.581);
+    margin: 8vh 20vw;
   }
   footer.footer div.footer {
     padding: 3vh 0vw;

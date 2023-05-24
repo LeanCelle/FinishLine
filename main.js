@@ -1,5 +1,5 @@
 // JAVASCRIPT
-
+/*
 const usuario = prompt("Ingrese su nombre de usuario")
 const contrasena =  prompt("Ingrese su contraseña")
 const edad = prompt("Ingrese su edad")
@@ -30,7 +30,7 @@ function productos() {
         alert(`Agregaste correctamente: Zapatillas Nike por $${zapatillasNike}`)
     }else if (eleccion === 22000|| eleccion === "Botines Puma" || eleccion === "3"){
         alert(`Agregaste correctamente: Botines Puma por $${botinesPuma}`)
-    }else if (eleccion=== "Todos los productos" || eleccion === "4"){
+    }else if (eleccion === "Todos los productos" || eleccion === "4"){
         alert(`Agregaste correctamente todos los productos por $${remeraAdidas + zapatillasNike + botinesPuma}`)
     }else {
         console.log(`No seleccionó ningun producto`)
@@ -93,7 +93,104 @@ const puma = new InfoProductos("Botines", 22000, "(10 unidades disponibles).", "
 console.log(puma)
 console.log(puma.alertInfoProductos())
 
+*/
+
+class constructorProd {
+    constructor(nombre, marca, precio) {
+        this.nombre = nombre;
+        this.marca = marca;
+        this.precio = precio;
+    }
+}
+ 
+// Productos
+
+let productos = [
+    {nombre: "Camperon adidas Argentina Condivo 2022", marca: "Adidas", precio: 45000, talle: "M", prenda: "Campera"},
+    {nombre: "Camiseta Argentina Campeones Titular", marca: "Adidas", precio: 24490, talle: "S", prenda: "Remera"},
+    {nombre: "Short De Baño Puma Length Swim De Hombre", marca: "Puma", precio: 5499, talle: "S", prenda: "Pantalon"},
+    {nombre: "Remera Running Nike Dri-Fit Miler Hombre", marca: "Nike", precio: 14499, talle: "L", prenda: "Remera"},
+    {nombre: "Zapatillas Under Armour Hovr Sonic 5", marca: "Under Armour", precio: 49999, talle: "42", prenda: "Zapatillas"},
+]
+
+// Elección
+
+function eleccion() {
+    let nombre = prompt("Ingrese el nombre del producto");
+    let marca = prompt("Ingrese la marca del producto");
+    let precio = parseInt(prompt("Ingrese el precio del producto"));
+    const newEleccion = new constructorProd(nombre, marca, precio);
+    carrito.push(newEleccion);
+    alert("Producto añadido al carrito");
+}
+
+
+// Ver carrito
+
+function verCarrito() {
+    carrito.map((p) => {
+        alert(
+            `Has seleccionado ${p.nombre} ${p.marca} a $${p.precio}`
+        );
+    });
+}
+
+// Oferta
+
+function ofertas() {
+    const ofertas = productos.filter((p)=> p.precio >= 5499 && p.precio <= 24490 )
+    for (const oferta of ofertas) {
+        alert(`La oferta del dia es: ${oferta.nombre} ${oferta.marca} a $${oferta.precio}`)
+    }
+}
+
+// Finalizar compra
+
+function finalizarCompra() {
+    const total = carrito.reduce((acc, el) => acc + el.precio, 0);
+    alert(`El total a pagar es de: $${total}`)
+}
+
+
+let carrito = [];
+
+
+let ciclo = prompt("Seleccione una opción: \n 1- Ingresar productos \n 2- Ver ofertas \n 3- Ver carrito \n 4- Finalizar compra \n 5- Salir")
+
+while (ciclo !== "5") {
+    if (ciclo === "1") {
+        eleccion(carrito);
+    }if (ciclo === "2") {
+        ofertas();
+    }if (ciclo === "3") {
+        verCarrito();
+    }if (ciclo === "4") {
+        finalizarCompra()
+        break
+    }
+    ciclo = prompt("Vuelva a ingresar una opción: \n 1- Seguir comprando \n 2- Ver ofertas \n 3- Ver carrito \n 4- Finalizar compra \n 5- Salir");
+}
 
 
 
+// Filtrar
+
+const filtroMarca = productos.filter((p)=> p.marca === "Adidas")
+console.log(filtroMarca);
+
+const filtroTalle = productos.filter((p) => p.talle === "S" )
+console.log(filtroTalle);
+
+const filtroPrenda = productos.filter((p) => p.prenda === "Remera")
+console.log(filtroPrenda);
+
+// Map
+
+productos.map((element, indice)=> {
+    console.log(element);
+})
+
+// Find
+const findMiCarrito = productos.find((p)=> p.nombre = "Camperon adidas Argentina Condivo 2022")
+console.log(findMiCarrito)
 
