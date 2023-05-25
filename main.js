@@ -138,7 +138,7 @@ function verCarrito() {
 // Oferta
 
 function ofertas() {
-    const ofertas = productos.filter((p)=> p.precio >= 5499 && p.precio <= 24490 )
+    const ofertas = productos.filter((p)=> p.precio >= 5499 && p.precio <= 14499 )
     for (const oferta of ofertas) {
         alert(`La oferta del dia es: ${oferta.nombre} ${oferta.marca} a $${oferta.precio}`)
     }
@@ -147,15 +147,29 @@ function ofertas() {
 // Finalizar compra
 
 function finalizarCompra() {
-    const total = carrito.reduce((acc, el) => acc + el.precio, 0);
-    alert(`El total a pagar es de: $${total}`)
+    let descuento = prompt("Ingrese su código de descuento")
+
+    const totalProd = carrito.reduce((acc, el) => acc + el.precio, 0);
+    const totalEnvio = carrito.reduce((acc, el) => acc + el.precio, 999);
+    const totalDescuentoProd = carrito.reduce((acc, el) => (acc + el.precio) * 0.8, 0)
+    const totalDescuentoEnvio = carrito.reduce((acc, el) => (acc + el.precio) * 0.8, 999)
+
+    if (descuento === "SOYLEAN" && totalEnvio <= 29999) {
+        alert(`Productos: $${totalProd} \n Envio: $999 \n TOTAL: ${totalDescuentoEnvio}`)
+    } else if (descuento === "SOYLEAN" && totalEnvio > 29999) {
+        alert(`Productos: $${totalProd} \n Envio: $0 \n TOTAL: ${totalDescuentoProd}`)
+    } else if (descuento != "SOYLEAN" && totalEnvio <= 29999) {
+        alert(`Productos: $${totalProd} \n Envio: $999 \n TOTAL: ${totalEnvio}`)
+    } else if(descuento != "SOYLEAN" && totalEnvio > 29999) {
+        alert(`Productos: $${totalProd} \n Envio: $0 \n TOTAL: ${totalProd}`)
+    }
 }
 
 
 let carrito = [];
 
 
-let ciclo = prompt("Seleccione una opción: \n 1- Ingresar productos \n 2- Ver ofertas \n 3- Ver carrito \n 4- Finalizar compra \n 5- Salir")
+let ciclo = prompt("Seleccione una opción: \n 1- Productos \n 2- Ver ofertas \n 3- Ver carrito \n 4- Finalizar compra \n 5- Salir")
 
 while (ciclo !== "5") {
     if (ciclo === "1") {
@@ -193,4 +207,7 @@ productos.map((element, indice)=> {
 // Find
 const findMiCarrito = productos.find((p)=> p.nombre = "Camperon adidas Argentina Condivo 2022")
 console.log(findMiCarrito)
+
+
+
 
