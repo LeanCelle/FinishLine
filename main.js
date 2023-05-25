@@ -151,17 +151,15 @@ function finalizarCompra() {
 
     const totalProd = carrito.reduce((acc, el) => acc + el.precio, 0);
     const totalEnvio = carrito.reduce((acc, el) => acc + el.precio, 999);
-    const totalDescuentoProd = carrito.reduce((acc, el) => (acc + el.precio) * 0.8, 0)
-    const totalDescuentoEnvio = carrito.reduce((acc, el) => (acc + el.precio) * 0.8, 999)
 
     if (descuento === "SOYLEAN" && totalEnvio <= 29999) {
-        alert(`Productos: $${totalProd} \n Envio: $999 \n TOTAL: ${totalDescuentoEnvio}`)
+        alert(`Productos: $${totalProd} \n Envio: $999 \n DESCUENTO: 20% \n TOTAL: $${totalEnvio * 0.8}`)
     } else if (descuento === "SOYLEAN" && totalEnvio > 29999) {
-        alert(`Productos: $${totalProd} \n Envio: $0 \n TOTAL: ${totalDescuentoProd}`)
+        alert(`Productos: $${totalProd} \n Envio: $0 \n DESCUENTO: 20% \n TOTAL: $${totalProd * 0.8}`)
     } else if (descuento != "SOYLEAN" && totalEnvio <= 29999) {
-        alert(`Productos: $${totalProd} \n Envio: $999 \n TOTAL: ${totalEnvio}`)
+        alert(`Productos: $${totalProd} \n Envio: $999 \n TOTAL: $${totalEnvio}`)
     } else if(descuento != "SOYLEAN" && totalEnvio > 29999) {
-        alert(`Productos: $${totalProd} \n Envio: $0 \n TOTAL: ${totalProd}`)
+        alert(`Productos: $${totalProd} \n Envio: $0 \n TOTAL: $${totalProd}`)
     }
 }
 
@@ -182,6 +180,7 @@ while (ciclo !== "5") {
         finalizarCompra()
         break
     }
+
     ciclo = prompt("Vuelva a ingresar una opción: \n 1- Seguir comprando \n 2- Ver ofertas \n 3- Ver carrito \n 4- Finalizar compra \n 5- Salir");
 }
 
