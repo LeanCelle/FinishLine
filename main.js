@@ -1,21 +1,5 @@
 // JAVASCRIPT
 /*
-const usuario = prompt("Ingrese su nombre de usuario")
-const contrasena =  prompt("Ingrese su contraseña")
-const edad = prompt("Ingrese su edad")
-const bienvenido = `Bienvenido ${usuario}! Comienza a buscar tus productos favoritos en FinishLine.`
-
-function registrarse() {
-    if (usuario === "leancelle" && contrasena === "12345" && edad >= 18) {
-        console.log("Acceso concedido")
-    }else if (usuario === "leancelle" && contrasena === "12345" && edad < 18){
-        console.log("Acceso denegado (no cumple con la edad mínima)")
-    }else {
-        console.log("Acceso denegado")
-    }
-}
-
-registrarse()
 
 const remeraAdidas = 8500
 const zapatillasNike = 25000
@@ -95,6 +79,30 @@ console.log(puma.alertInfoProductos())
 
 */
 
+// Bienvenido
+
+const usuario = prompt("Ingrese su nombre de usuario")
+const contrasena =  prompt("Ingrese su contraseña")
+const edad = prompt("Ingrese su edad")
+const bienvenido = alert(`Bienvenido ${usuario}! Comienza a buscar tus productos favoritos en FinishLine.`)
+
+function registrarse() {
+    if (usuario === "leancelle" && contrasena === "12345" && edad >= 18) {
+        console.log("Acceso concedido")
+    }else if (usuario === "leancelle" && contrasena === "12345" && edad < 18){
+        console.log("Acceso denegado (no cumple con la edad mínima)")
+    }else {
+        console.log("Acceso denegado")
+    }
+}
+
+registrarse()
+
+
+
+
+// Constructor 
+
 class constructorProd {
     constructor(nombre, marca, precio) {
         this.nombre = nombre;
@@ -163,13 +171,15 @@ function finalizarCompra() {
     }
 }
 
+// Carrito
 
 let carrito = [];
 
 
-let ciclo = prompt("Seleccione una opción: \n 1- Productos \n 2- Ver ofertas \n 3- Ver carrito \n 4- Finalizar compra \n 5- Salir")
+let ciclo = prompt("Bienvenido al sistema de compra rápida de FinishLine! \n \n Por favor seleccione una opción: \n \n 1- Productos \n 2- Ver ofertas \n 3- Ver carrito \n 4- Finalizar compra \n 5- Ingresar al sitio")
 
 while (ciclo !== "5") {
+
     if (ciclo === "1") {
         eleccion(carrito);
     }if (ciclo === "2") {
@@ -178,6 +188,8 @@ while (ciclo !== "5") {
         verCarrito();
     }if (ciclo === "4") {
         finalizarCompra()
+        console.log("Procesando su pago...")
+        alert("Gracias por comprar en FinishLine!")
         break
     }
 
