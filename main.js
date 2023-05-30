@@ -116,9 +116,9 @@ class constructorProd {
 let productos = [
     {nombre: "Camperon adidas Argentina Condivo 2022", marca: "Adidas", precio: 45000, talle: "M", prenda: "Campera"},
     {nombre: "Camiseta Argentina Campeones Titular", marca: "Adidas", precio: 24490, talle: "S", prenda: "Remera"},
+    {nombre: "Conjunto Adidas Essential Negro", marca: "Adidas", precio: 21299, talle: "L", prenda: "Remera"},
+    {nombre: "Botines De Fútbol Adidas Predator Unisex Negro", marca: "Adidas", precio: 39999, talle: "42", prenda: "Zapatillas"},
     {nombre: "Short De Baño Puma Length Swim De Hombre", marca: "Puma", precio: 5499, talle: "S", prenda: "Pantalon"},
-    {nombre: "Remera Running Nike Dri-Fit Miler Hombre", marca: "Nike", precio: 14499, talle: "L", prenda: "Remera"},
-    {nombre: "Zapatillas Under Armour Hovr Sonic 5", marca: "Under Armour", precio: 49999, talle: "42", prenda: "Zapatillas"},
 ]
 
 // Elección
@@ -171,6 +171,7 @@ function finalizarCompra() {
     }
 }
 
+
 // Carrito
 
 let carrito = [];
@@ -201,24 +202,83 @@ while (ciclo !== "5") {
 // Filtrar
 
 const filtroMarca = productos.filter((p)=> p.marca === "Adidas")
-console.log(filtroMarca);
+console.table(filtroMarca);
 
 const filtroTalle = productos.filter((p) => p.talle === "S" )
-console.log(filtroTalle);
+console.table(filtroTalle);
 
 const filtroPrenda = productos.filter((p) => p.prenda === "Remera")
-console.log(filtroPrenda);
+console.table(filtroPrenda);
 
 // Map
 
 productos.map((element, indice)=> {
-    console.log(element);
+    console.table(element);
 })
 
 // Find
 const findMiCarrito = productos.find((p)=> p.nombre = "Camperon adidas Argentina Condivo 2022")
-console.log(findMiCarrito)
+console.table(findMiCarrito)
+
+// Sort 
+
+// let numeros = [4, 6, 1, 9, 2]
+/*
+function ordenarProductos(a, b) {
+    return a - b;
+}
+
+const filtroPrecio = productos.filter((p) => p.precio !== 1 )
+
+filtroPrecio.sort(ordenarProductos)
+
+console.log(filtroPrecio)*/
+
+const adidasFilter = document.querySelector(".adidas")
+
+adidasFilter.addEventListener("click", () => {
+
+    const filtroMarca = productos.filter((p)=> p.marca === "Adidas")
+    const filtroMarca1 = JSON.stringify(filtroMarca)
+    localStorage.setItem("productos", filtroMarca1)
+
+    console.log(filtroMarca1);
+}) 
+
+const btnCero = document.querySelector("#cero")
+
+btnCero.addEventListener("click", () => {
+    const prod0 = JSON.stringify(productos[0])
+    localStorage.setItem("productos", prod0)
+
+    console.log(prod0);
+}) 
 
 
+const btnOne = document.querySelector("#one")
+
+btnOne.addEventListener("click", () => {
+    const prod1 = JSON.stringify(productos[1])
+    localStorage.setItem("productos", prod1)
+
+    console.log(prod1);
+}) 
 
 
+const btnTwo = document.querySelector("#two")
+
+btnTwo.addEventListener("click", () => {
+    const prod2 = JSON.stringify(productos[2])
+    localStorage.setItem("productos", prod2)
+
+    console.log(prod2);
+}) 
+
+const btnThree = document.querySelector("#three")
+
+btnThree.addEventListener("click", () => {
+    const prod3 = JSON.stringify(productos[3])
+    localStorage.setItem("productos", prod3)
+
+    console.log(prod3);
+}) 

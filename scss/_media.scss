@@ -92,7 +92,7 @@
     
     h3.lo-mas-vendido {
         font-size: 3vw;
-        padding: 5vh 0vw 5vh 0vw;
+        padding: 10vh 0vw 5vh 0vw;
     }
     
     section.cambio {
@@ -319,6 +319,7 @@
     
     section.productos {
         width: 100%;
+        margin-bottom: 15vh;
         gap: 10vw;
         div.productos-1 {
             width: 100%;
@@ -343,6 +344,11 @@
                     padding: 2vh 0vw 0vh 0vw;
                     margin: 0vw;
                     font-size: 1.2vw;
+                }
+                button.btnProd {
+                    margin: 1vh 6vw;
+                    padding: 1vw;
+                    font-size: 1.5vw;
                 }
             }
         }

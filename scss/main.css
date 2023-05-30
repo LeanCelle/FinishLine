@@ -175,11 +175,11 @@ h3.lo-mas-vendido {
   font-family: "Raleway", sans-serif;
   font-size: 3rem;
   text-align: center;
-  padding: 5rem 0rem 5rem 0rem;
+  padding: 10rem 0rem 5rem 0rem;
 }
 
 section.cambio {
-  padding: 10rem 0rem 0rem 0rem;
+  padding: 0rem 0rem 0rem 0rem;
 }
 section.cambio div.cambio0 {
   display: flex;
@@ -442,12 +442,18 @@ h2.recomendados {
   font-size: 3rem;
 }
 
+h3.adidas {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 section.productos {
   width: 100%;
   display: flex;
   flex-direction: column;
   font-family: "Raleway", sans-serif;
   justify-content: center;
+  margin-bottom: 15rem;
   gap: 10rem;
 }
 section.productos div.productos-1 {
@@ -485,6 +491,22 @@ section.productos div.productos-1 div.productos h4.productos {
   padding: 2rem 0rem 0rem 0rem;
   margin: 0rem;
   font-size: 1.2rem;
+}
+section.productos div.productos-1 div.productos button.btnProd {
+  background-color: black;
+  color: white;
+  border-color: white;
+  margin: 1rem 6rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.productos div.productos-1 div.productos button.btnProd:hover {
+  background-color: rgba(0, 0, 0, 0.071);
+  color: black;
+  transition: 1.2s;
 }
 
 div.cancha-verde {
@@ -616,7 +638,7 @@ div.logo-clubes img.clubes {
   }
   h3.lo-mas-vendido {
     font-size: 3vw;
-    padding: 5vh 0vw 5vh 0vw;
+    padding: 10vh 0vw 5vh 0vw;
   }
   section.cambio {
     padding: 10vh 0vw 0vh 0vw;
@@ -817,6 +839,7 @@ div.logo-clubes img.clubes {
   }
   section.productos {
     width: 100%;
+    margin-bottom: 15vh;
     gap: 10vw;
   }
   section.productos div.productos-1 {
@@ -844,6 +867,11 @@ div.logo-clubes img.clubes {
     padding: 2vh 0vw 0vh 0vw;
     margin: 0vw;
     font-size: 1.2vw;
+  }
+  section.productos div.productos-1 div.productos button.btnProd {
+    margin: 1vh 6vw;
+    padding: 1vw;
+    font-size: 1.5vw;
   }
   /* MUJER */
   div.cancha-verde {

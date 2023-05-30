@@ -11,12 +11,18 @@ h2.recomendados {
     font-size: 3rem;
 }
 
+h3.adidas {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 section.productos {
     width: 100%;
     display: flex;
     flex-direction: column;
     font-family: 'Raleway', sans-serif;
     justify-content: center;
+    margin-bottom: 15rem;
     gap: 10rem;
     div.productos-1 {
         width: 100%;
@@ -51,6 +57,22 @@ section.productos {
                 padding: 2rem 0rem 0rem 0rem;
                 margin: 0rem;
                 font-size: 1.2rem;
+            }
+            button.btnProd {
+                background-color: black;
+                color: white;
+                border-color: white;
+                margin: 1rem 6rem;
+                padding: 1rem;
+                font-size: 1.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.071);
+                    color: black;
+                    transition: 1.2s;
+                }
             }
         }
     }
