@@ -234,6 +234,8 @@ filtroPrecio.sort(ordenarProductos)
 
 console.log(filtroPrecio)*/
 
+
+
 const adidasFilter = document.querySelector(".adidas")
 
 adidasFilter.addEventListener("click", () => {
@@ -251,6 +253,9 @@ btnCero.addEventListener("click", () => {
     const prod0 = JSON.stringify(productos[0])
     localStorage.setItem("productos", prod0)
 
+    carrito.push(prod0)
+
+
     console.log(prod0);
 }) 
 
@@ -260,6 +265,9 @@ const btnOne = document.querySelector("#one")
 btnOne.addEventListener("click", () => {
     const prod1 = JSON.stringify(productos[1])
     localStorage.setItem("productos", prod1)
+
+
+    carrito.push(prod1)
 
     console.log(prod1);
 }) 
@@ -271,6 +279,9 @@ btnTwo.addEventListener("click", () => {
     const prod2 = JSON.stringify(productos[2])
     localStorage.setItem("productos", prod2)
 
+    carrito.push(prod2)
+
+
     console.log(prod2);
 }) 
 
@@ -280,5 +291,242 @@ btnThree.addEventListener("click", () => {
     const prod3 = JSON.stringify(productos[3])
     localStorage.setItem("productos", prod3)
 
+    carrito.push(prod3)
+
     console.log(prod3);
 }) 
+
+console.log(carrito);
+
+
+
+for (producto of productos) {
+
+    // SECTION
+
+const section = document.querySelector("#productos")
+section.style.display = "flex"
+section.style.flexDirection = "column"
+section.style.justifyContent = "center"
+section.style.gap = "10rem"
+section.style.width = "100%"
+section.style.marginBottom = "15rem"
+
+
+
+
+// DIV-1
+
+let divIdOne = document.createElement("div")
+divIdOne.id = "divIdOne"
+divIdOne.style.display = "flex"
+divIdOne.style.flexDirection = "row"
+divIdOne.style.flexWrap = "wrap"
+divIdOne.style.justifyContent = "center"
+divIdOne.style.gap = "5rem"
+divIdOne.style.width = "100%"
+
+// 1
+const divProdOne = document.createElement("div")
+divProdOne.id = "divProdOne"
+divProdOne.style.width = "30rem"
+divProdOne.style.display = "flex"
+divProdOne.style.flexDirection = "column"
+divProdOne.style.padding = "1rem"
+divProdOne.style.boxShadow = "0rem 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.097)"
+divProdOne.style.justifyContent = "center"
+
+const imgOne = document.createElement("img")
+imgOne.id = "imgIdOne"
+imgOne.src = "../img/camperon-argentina-adidas.jpg"
+imgOne.style.width = "100%"
+
+const h3One = document.createElement("h3")
+let one = productos[0]
+h3One.textContent = one.nombre
+h3One.style.padding = "1rem 0rem 0rem 0rem"
+h3One.style.fontSize = "1.8rem"
+
+const h4One = document.createElement("h4")
+h4One.textContent = "$83.599" 
+h4One.style.padding = "2rem 0rem 0rem 0rem"
+h4One.style.fontSize = "1.2rem"
+
+const btn1 = document.createElement("button")
+btn1.id = "btnId1"
+btn1.textContent = "Agregar al carrito"
+btn1.style.backgroundColor = "black"
+btn1.style.color = "white"
+btn1.style.borderColor = "white"
+btn1.style.margin = "1rem 6rem"
+btn1.style.padding = "1rem"
+btn1.style.fontSize = "1.5rem"
+btn1.style.display = "flex"
+btn1.style.justifyContent = "center"
+btn1.style.alignItems = "center"
+
+
+// 2
+const divProdTwo = document.createElement("div")
+divProdTwo.id = "divProdTwo"
+divProdTwo.style.width = "30rem"
+divProdTwo.style.display = "flex"
+divProdTwo.style.flexDirection = "column"
+divProdTwo.style.padding = "1rem"
+divProdTwo.style.boxShadow = "0rem 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.097)"
+divProdTwo.style.justifyContent = "center"
+
+const imgTwo = document.createElement("img")
+imgTwo.id = "imgIdTwo"
+imgTwo.src = "../img/camiseta-argentina.jpg"
+imgTwo.style.width = "100%"
+
+const h3Two = document.createElement("h3")
+let two = productos[1]
+h3Two.textContent = two.nombre 
+h3Two.style.padding = "1rem 0rem 0rem 0rem"
+h3Two.style.fontSize = "1.8rem"
+
+const h4Two = document.createElement("h4")
+h4Two.textContent = "$24.490"
+h4Two.style.padding = "2rem 0rem 0rem 0rem"
+h4Two.style.fontSize = "1.2rem"
+
+const btn2 = document.createElement("button")
+btn2.id = "btnId2"
+btn2.textContent = "Agregar al carrito"
+btn2.style.backgroundColor = "black"
+btn2.style.color = "white"
+btn2.style.borderColor = "white"
+btn2.style.margin = "1rem 6rem"
+btn2.style.padding = "1rem"
+btn2.style.fontSize = "1.5rem"
+btn2.style.display = "flex"
+btn2.style.justifyContent = "center"
+btn2.style.alignItems = "center"
+
+// DIV-2
+
+let divIdTwo = document.createElement("div")
+divIdTwo.id = "divIdTwo"
+divIdTwo.style.display = "flex"
+divIdOne.style.flexDirection = "row"
+divIdOne.style.flexWrap = "wrap"
+divIdTwo.style.justifyContent = "center"
+divIdTwo.style.gap = "5rem"
+divIdTwo.style.width = "100%"
+
+// 3
+const divProdThree = document.createElement("div")
+divProdThree.id = "divProdThree"
+divProdThree.style.width = "30rem"
+divProdThree.style.display = "flex"
+divProdThree.style.flexDirection = "column"
+divProdThree.style.padding = "1rem"
+divProdThree.style.boxShadow = "0rem 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.097)"
+divProdThree.style.justifyContent = "center"
+
+const imgThree = document.createElement("img")
+imgThree.id = "imgIdThree"
+imgThree.src = "../img/campera-adidas.jpg"
+imgThree.style.width = "100%"
+
+const h3Three = document.createElement("h3")
+let three = productos[2]
+h3Three.textContent = three.nombre 
+h3Three.style.padding = "1rem 0rem 0rem 0rem"
+h3Three.style.fontSize = "1.8rem"
+
+const h4Three = document.createElement("h4")
+h4Three.textContent = "$21.299"
+h4Three.style.padding = "2rem 0rem 0rem 0rem"
+h4Three.style.fontSize = "1.2rem"
+
+const btn3 = document.createElement("button")
+btn3.id = "btnId3"
+btn3.textContent = "Agregar al carrito"
+btn3.style.backgroundColor = "black"
+btn3.style.color = "white"
+btn3.style.borderColor = "white"
+btn3.style.margin = "1rem 6rem"
+btn3.style.padding = "1rem"
+btn3.style.fontSize = "1.5rem"
+btn3.style.display = "flex"
+btn3.style.justifyContent = "center"
+btn3.style.alignItems = "center"
+
+// 4
+const divProdFour = document.createElement("div")
+divProdFour.id = "divProdFour"
+divProdFour.style.width = "30rem"
+divProdFour.style.display = "flex"
+divProdFour.style.flexDirection = "column"
+divProdFour.style.padding = "1rem"
+divProdFour.style.boxShadow = "0rem 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.097)"
+divProdFour.style.justifyContent = "center"
+
+const imgFour = document.createElement("img")
+imgFour.id = "imgIdFour"
+imgFour.src = "../img/botines-violeta.jpg"
+imgFour.style.width = "100%"
+
+const h3Four = document.createElement("h3")
+let four = productos[3]
+h3Four.textContent = four.nombre 
+h3Four.style.padding = "1rem 0rem 0rem 0rem"
+h3Four.style.fontSize = "1.8rem"
+
+
+const h4Four = document.createElement("h4")
+h4Four.textContent = "$39.999" 
+h4Four.style.padding = "2rem 0rem 0rem 0rem"
+h4Four.style.fontSize = "1.2rem"
+
+const btn4 = document.createElement("button")
+btn4.id = "btnId4"
+btn4.textContent = "Agregar al carrito"
+btn4.style.backgroundColor = "black"
+btn4.style.color = "white"
+btn4.style.borderColor = "white"
+btn4.style.margin = "1rem 6rem"
+btn4.style.padding = "1rem"
+btn4.style.fontSize = "1.5rem"
+btn4.style.display = "flex"
+btn4.style.justifyContent = "center"
+btn4.style.alignItems = "center"
+
+
+// DECLARO 
+
+section.appendChild(divIdOne)
+section.appendChild(divIdTwo)
+
+
+divIdOne.appendChild(divProdOne)
+divProdOne.appendChild(imgOne)
+divProdOne.appendChild(h3One)
+divProdOne.appendChild(h4One)
+divProdOne.appendChild(btn1)
+
+
+divIdOne.appendChild(divProdTwo)
+divProdTwo.appendChild(imgTwo)
+divProdTwo.appendChild(h3Two)
+divProdTwo.appendChild(h4Two)
+divProdTwo.appendChild(btn2)
+
+divIdTwo.appendChild(divProdThree)
+divProdThree.appendChild(imgThree)
+divProdThree.appendChild(h3Three)
+divProdThree.appendChild(h4Three)
+divProdThree.appendChild(btn3)
+
+divIdTwo.appendChild(divProdFour)
+divProdFour.appendChild(imgFour)
+divProdFour.appendChild(h3Four)
+divProdFour.appendChild(h4Four)
+divProdFour.appendChild(btn4)
+
+
+document.body(section)
+}
