@@ -1,202 +1,206 @@
-// JAVASCRIPT
-/*
-
-const remeraAdidas = 8500
-const zapatillasNike = 25000
-const botinesPuma = 22000
-
-
-function productos() {
-    const eleccion = prompt("Seleccione el producto que desea comprar: \n 1-Remera Adidas \n 2-Zapatillas Nike \n 3- Botines Puma \n 4- Todos los productos")
-    if (eleccion === 8500 || eleccion === "Remera Adidas" || eleccion === "1") {
-        alert(`Agregaste correctamente: Remera Adidas por $${remeraAdidas}`)
-    }else if (eleccion === 25000 || eleccion === "Zapatillas Nike" || eleccion === "2"){
-        alert(`Agregaste correctamente: Zapatillas Nike por $${zapatillasNike}`)
-    }else if (eleccion === 22000|| eleccion === "Botines Puma" || eleccion === "3"){
-        alert(`Agregaste correctamente: Botines Puma por $${botinesPuma}`)
-    }else if (eleccion === "Todos los productos" || eleccion === "4"){
-        alert(`Agregaste correctamente todos los productos por $${remeraAdidas + zapatillasNike + botinesPuma}`)
-    }else {
-        console.log(`No seleccionó ningun producto`)
-    }
-}
-
-function finalCompra() {
-    for (let finalizarCompra = "no"; finalizarCompra = "si"; finalizarCompra++) {
-        let finalizarCompra = prompt("Desea finalizar su compra? \n SI - NO")
-        if (finalizarCompra === "no" || finalizarCompra === "No" || finalizarCompra === "NO") {
-            productos()
-        }else if (finalizarCompra === "si" || finalizarCompra === "Si" || finalizarCompra === "SI") {
-            break
-        }else {
-            break
-        }
-    }
-}
-
-productos()
-finalCompra()
-
-
-alert(bienvenido)
-
-
-const adidas = [
-    producto0 = "Camperon adidas Argentina Condivo 2022",
-    producto1 = "Camiseta Argentina Campeones Titular",
-    producto2 = "Conjunto Adidas Essential Negro",
-    producto3 = "Botines De Fútbol Adidas Predator Unisex Negro",
-]
-
-console.log(adidas[0])
-console.log(adidas[1])
-console.log(adidas[2])
-console.log(adidas[3])
-adidas.push("Campera Adidas Tiro Pride")
-console.log(adidas[4])
-
-
-function InfoProductos (nombre, precio, stock, marca) {
-    this.nombre = nombre
-    this.precio = precio
-    this.stock = stock
-    this.marcas = marca
-    this.alertInfoProductos = function(){
-        return `Agregaste correctamente: ${this.nombre} ${marca} por $${this.precio}. ${this.stock} `
-    } 
-}
-
-
-
-
-const nike = new InfoProductos("Zapatillas", 25000, "(5 unidades disponibles).", "Nike")
-console.log(nike)
-console.log(nike.alertInfoProductos())
-
-const puma = new InfoProductos("Botines", 22000, "(10 unidades disponibles).", "Puma")
-console.log(puma)
-console.log(puma.alertInfoProductos())
-
-*/
-
-// Bienvenido
-
-const usuario = prompt("Ingrese su nombre de usuario")
-const contrasena =  prompt("Ingrese su contraseña")
-const edad = prompt("Ingrese su edad")
-const bienvenido = alert(`Bienvenido ${usuario}! Comienza a buscar tus productos favoritos en FinishLine.`)
-
-function registrarse() {
-    if (usuario === "leancelle" && contrasena === "12345" && edad >= 18) {
-        console.log("Acceso concedido")
-    }else if (usuario === "leancelle" && contrasena === "12345" && edad < 18){
-        console.log("Acceso denegado (no cumple con la edad mínima)")
-    }else {
-        console.log("Acceso denegado")
-    }
-}
-
-registrarse()
-
-
-
-
-// Constructor 
-
-class constructorProd {
-    constructor(nombre, marca, precio) {
-        this.nombre = nombre;
-        this.marca = marca;
-        this.precio = precio;
-    }
-}
- 
 // Productos
-
 let productos = [
-    {nombre: "Camperon adidas Argentina Condivo 2022", marca: "Adidas", precio: 45000, talle: "M", prenda: "Campera"},
-    {nombre: "Camiseta Argentina Campeones Titular", marca: "Adidas", precio: 24490, talle: "S", prenda: "Remera"},
-    {nombre: "Conjunto Adidas Essential Negro", marca: "Adidas", precio: 21299, talle: "L", prenda: "Remera"},
-    {nombre: "Botines De Fútbol Adidas Predator Unisex Negro", marca: "Adidas", precio: 39999, talle: "42", prenda: "Zapatillas"},
-    {nombre: "Short De Baño Puma Length Swim De Hombre", marca: "Puma", precio: 5499, talle: "S", prenda: "Pantalon"},
+    {id: 1, nombre: "Camperon adidas Argentina Condivo 2022", marca: "Adidas", precio: 45000, talle: "M", prenda: "Campera", imagen: "../img/camperon-argentina-adidas.jpg"},
+    {id: 2, nombre: "Camiseta Argentina Campeones Titular", marca: "Adidas", precio: 24490, talle: "S", prenda: "Remera", imagen: "../img/camiseta-argentina.jpg"},
+    {id: 3, nombre: "Conjunto Adidas Essential Negro", marca: "Adidas", precio: 21299, talle: "L", prenda: "Remera", imagen: "../img/campera-adidas.jpg"}, 
+    {id: 4, nombre: "Botines De Fútbol Adidas Predator Unisex Negro", marca: "Adidas", precio: 39999, talle: "42", prenda: "Zapatillas", imagen: "../img/botines-violeta.jpg"},
+    {id: 5, nombre: "Short De Baño Puma Length Swim De Hombre", marca: "Puma", precio: 5499, talle: "S", prenda: "Pantalon", imagen: "../img/short-puma-negro.webp"},
+    {id: 6, nombre: "Campera Adidas Tiro Pride", marca: "Adidas", precio: 27999, talle: "M", prenda: "Campera", imagen: "../img/campera-adidas-mangas.jpg"},
+    {id: 7, nombre: "Campera adidas Varilite", marca: "Adidas", precio: 60099, talle: "L", prenda: "Campera", imagen: "../img/campera-adidas-facha.jpg"},
+    {id: 8, nombre: "Campera adidas Marathon", marca: "Adidas", precio: 39999, talle: "L", prenda: "Campera", imagen: "../img/campera-adidas-camuflada-negra.jpg"},
+    {id: 9, nombre: "Remera Nike Sportswear", marca: "Nike", precio: 7999, talle: "S", prenda: "Remera", imagen: "../img/remera-nike-pipa-roja.jpg"},
+    {id: 10, nombre: "Remera Running Nike Dri-Fit Miler Hombre", marca: "Nike", precio: 14499, talle: "S", prenda: "Remera", imagen: "../img/remera-nike-blanca.jpg"},
+    {id: 11, nombre: "Remera Canterbury Ccc Logo", marca: "Canterbury", precio: 6999, talle: "S", prenda: "Remera", imagen: "../img/remera-canterbury.jpg"},
+    {id: 12, nombre: "Remera Under Armour Challenger Top", marca: "Under Armour", precio: 12499, talle: "M", prenda: "Remera", imagen: "../img/remera-under-negra.jpg"},
+    {id: 13, nombre: "Zapatillas Urbanas adidas Breaknet", marca: "Adidas", precio: 25999, talle: "41", prenda: "Zapatillas", imagen: "../img/zapatillas-adidas-urbana.jpg"},
+    {id: 14, nombre: "Zapatillas Running Nike Air Zoom Vomero 16", marca: "Nike", precio: 35499, talle: "43", prenda: "Zapatillas", imagen: "../img/zapatillas-nike-blancas.jpg"},
+    {id: 15, nombre: "Zapatillas Under Armour Hovr Sonic 5", marca: "Under Armour", precio: 49999, talle: "43", prenda: "Zapatillas", imagen: "../img/zapatillas-under-fluo.jpg"},
+    {id: 16, nombre: "Zapatillas adidas Response Super 3.0", marca: "Adidas", precio: 41999, talle: "41", prenda: "Zapatillas", imagen: "../img/zapatillas-adidas-rojas.jpg"},
+
+
 ]
-
-// Elección
-
-function eleccion() {
-    let nombre = prompt("Ingrese el nombre del producto");
-    let marca = prompt("Ingrese la marca del producto");
-    let precio = parseInt(prompt("Ingrese el precio del producto"));
-    const newEleccion = new constructorProd(nombre, marca, precio);
-    carrito.push(newEleccion);
-    alert("Producto añadido al carrito");
-}
-
-
-// Ver carrito
-
-function verCarrito() {
-    carrito.map((p) => {
-        alert(
-            `Has seleccionado ${p.nombre} ${p.marca} a $${p.precio}`
-        );
-    });
-}
-
-// Oferta
-
-function ofertas() {
-    const ofertas = productos.filter((p)=> p.precio >= 5499 && p.precio <= 14499 )
-    for (const oferta of ofertas) {
-        alert(`La oferta del dia es: ${oferta.nombre} ${oferta.marca} a $${oferta.precio}`)
-    }
-}
-
-// Finalizar compra
-
-function finalizarCompra() {
-    let descuento = prompt("Ingrese su código de descuento")
-
-    const totalProd = carrito.reduce((acc, el) => acc + el.precio, 0);
-    const totalEnvio = carrito.reduce((acc, el) => acc + el.precio, 999);
-
-    if (descuento === "SOYLEAN" && totalEnvio <= 29999) {
-        alert(`Productos: $${totalProd} \n Envio: $999 \n DESCUENTO: 20% \n TOTAL: $${totalEnvio * 0.8}`)
-    } else if (descuento === "SOYLEAN" && totalEnvio > 29999) {
-        alert(`Productos: $${totalProd} \n Envio: $0 \n DESCUENTO: 20% \n TOTAL: $${totalProd * 0.8}`)
-    } else if (descuento != "SOYLEAN" && totalEnvio <= 29999) {
-        alert(`Productos: $${totalProd} \n Envio: $999 \n TOTAL: $${totalEnvio}`)
-    } else if(descuento != "SOYLEAN" && totalEnvio > 29999) {
-        alert(`Productos: $${totalProd} \n Envio: $0 \n TOTAL: $${totalProd}`)
-    }
-}
-
 
 // Carrito
+let carritoCompras = []
 
-let carrito = [];
-
-
-let ciclo = prompt("Bienvenido al sistema de compra rápida de FinishLine! \n \n Por favor seleccione una opción: \n \n 1- Productos \n 2- Ver ofertas \n 3- Ver carrito \n 4- Finalizar compra \n 5- Ingresar al sitio")
-
-while (ciclo !== "5") {
-
-    if (ciclo === "1") {
-        eleccion(carrito);
-    }if (ciclo === "2") {
-        ofertas();
-    }if (ciclo === "3") {
-        verCarrito();
-    }if (ciclo === "4") {
-        finalizarCompra()
-        console.log("Procesando su pago...")
-        alert("Gracias por comprar en FinishLine!")
-        break
-    }
-
-    ciclo = prompt("Vuelva a ingresar una opción: \n 1- Seguir comprando \n 2- Ver ofertas \n 3- Ver carrito \n 4- Finalizar compra \n 5- Salir");
+// Creo cards
+function crearTarjeta(producto, indice) {
+    const card = document.createElement("div");
+    card.classList.add("card", "col-sm-12", "col-lg-3");
+    card.innerHTML = `
+      <img src="${producto.imagen}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">${producto.nombre}</h5>
+        <p class="card-text">$${producto.precio}</p>
+        <a href="#cart" class="btn btn-danger" onClick="agregarAlCarrito(${indice})">Agregar al carrito</a>
+      </div>
+    `;
+    return card;
 }
 
+// Filtro
+
+function adidasFiltro() {
+    const contenedor = document.getElementById("container");
+    contenedor.innerHTML = "";
+  
+    const filtroMarca = productos.filter((p) => p.marca === "Adidas");
+    filtroMarca.forEach((producto, indice) => {
+      const card = crearTarjeta(producto, indice);
+      contenedor.appendChild(card);
+    });
+}
+  
+function nikeFiltro() {
+    const contenedor = document.getElementById("container");
+    contenedor.innerHTML = "";
+  
+    const filtroMarca = productos.filter((p) => p.marca === "Nike");
+    filtroMarca.forEach((producto, indice) => {
+      const card = crearTarjeta(producto, indice);
+      contenedor.appendChild(card);
+    });
+}
+  
+// Agrega eventos de clic a los elementos <h5> de los filtros
+const filtroNike = document.getElementById("filtro-nike");
+const filtroAdidas = document.getElementById("filtro-adidas");
+  
+filtroNike.addEventListener("click", nikeFiltro);
+filtroAdidas.addEventListener("click", adidasFiltro);
+
+// Elimino filtros
+function mostrarTodos() {
+    const contenedor = document.getElementById("container");
+    contenedor.innerHTML = "";
+    
+    productos.forEach((producto, indice) => {
+      const card = crearTarjeta(producto, indice);
+      contenedor.appendChild(card);
+    });
+}
+  
+// Agrega evento de clic al elemento <h5> del botón de eliminar filtros
+const eliminarFiltros = document.getElementById("eliminar-filtros");
+eliminarFiltros.addEventListener("click", mostrarTodos);
+  
+  
+
+
+// Contenedor
+  
+const contenedor = document.getElementById("container");
+contenedor.style.display = "flex";
+contenedor.style.flexWrap = "wrap";
+contenedor.style.gap = "2rem";
+contenedor.style.justifyContent = "center";
+  
+productos.forEach((producto, indice) => {
+    const card = crearTarjeta(producto, indice);
+    contenedor.appendChild(card);
+});
+
+
+// Precio TOTAL de la compra
+function actualizarTotal() {
+    const totalCompra = carritoCompras.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
+    const precioTotal = document.querySelector("#totalCompra");
+    precioTotal.textContent = `TOTAL: $${totalCompra}`;
+}
+  
+function agregarAlCarrito(indice) {
+    const producto = productos[indice];
+  
+    // Verificar si el producto ya está en el carrito
+    const productoExistente = carritoCompras.find((item) => item.id === producto.id);
+  
+    if (productoExistente) {
+      // Si el producto ya está en el carrito, incrementar el contador
+      productoExistente.cantidad++;
+    } else {
+      // Si el producto no está en el carrito, agregarlo con un contador inicial de 1
+      producto.cantidad = 1;
+      carritoCompras.push(producto);
+    }
+  
+    // Guardar carrito en el local storage
+    guardarCarritoEnLocalStorage();
+  
+    // Actualizar la vista del carrito
+    actualizarCarritoEnPantalla();
+}
+
+function guardarCarritoEnLocalStorage() {
+    localStorage.setItem("carrito", JSON.stringify(carritoCompras));
+}
+  
+  
+
+window.addEventListener("load", () => {
+    const carritoGuardado = localStorage.getItem("carrito");
+    if (carritoGuardado) {
+      carritoCompras = JSON.parse(carritoGuardado);
+      actualizarCarritoEnPantalla();
+    }
+});
+  
+
+function actualizarCarritoEnPantalla() {
+    const carrito = document.getElementById("cart");
+    carrito.innerHTML = "";
+  
+    carritoCompras.forEach((producto, index) => {
+      const item = document.createElement("div");
+      item.innerHTML = `
+        <img src="${producto.imagen}" class="" alt="..."> - ${producto.nombre} - $${producto.precio} (Cantidad: ${producto.cantidad})
+        <button class="btn btn-outline-danger btn-sm" onClick="eliminarDelCarrito(${index})">Eliminar</button>
+      `;
+      carrito.appendChild(item);
+    });
+  
+    actualizarTotal();
+}
+
+  
+  
+function eliminarDelCarrito(indice) {
+    const producto = carritoCompras[indice];
+  
+    if (producto.cantidad > 1) {
+      // Si hay más de un producto, decrementar el contador
+      producto.cantidad--;
+    } else {
+      // Si solo hay un producto, eliminarlo del carrito
+      carritoCompras.splice(indice, 1);
+    }
+  
+    // Guardar carrito en el local storage
+    guardarCarritoEnLocalStorage();
+  
+    // Actualizar la vista del carrito
+    actualizarCarritoEnPantalla();
+}
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+//
+
+
+// CARRITO
+
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 
 // Filtrar
@@ -235,8 +239,7 @@ filtroPrecio.sort(ordenarProductos)
 console.log(filtroPrecio)*/
 
 
-
-const adidasFilter = document.querySelector(".adidas")
+/*const adidasFilter = document.querySelector(".adidas")
 
 adidasFilter.addEventListener("click", () => {
 
@@ -245,65 +248,15 @@ adidasFilter.addEventListener("click", () => {
     localStorage.setItem("productos", filtroMarca1)
 
     console.log(filtroMarca1);
-}) 
+})*/ 
 
-const btnCero = document.querySelector("#cero")
-
-btnCero.addEventListener("click", () => {
-    const prod0 = JSON.stringify(productos[0])
-    localStorage.setItem("productos", prod0)
-
-    carrito.push(prod0)
-
-
-    console.log(prod0);
-}) 
-
-
-const btnOne = document.querySelector("#one")
-
-btnOne.addEventListener("click", () => {
-    const prod1 = JSON.stringify(productos[1])
-    localStorage.setItem("productos", prod1)
-
-
-    carrito.push(prod1)
-
-    console.log(prod1);
-}) 
-
-
-const btnTwo = document.querySelector("#two")
-
-btnTwo.addEventListener("click", () => {
-    const prod2 = JSON.stringify(productos[2])
-    localStorage.setItem("productos", prod2)
-
-    carrito.push(prod2)
-
-
-    console.log(prod2);
-}) 
-
-const btnThree = document.querySelector("#three")
-
-btnThree.addEventListener("click", () => {
-    const prod3 = JSON.stringify(productos[3])
-    localStorage.setItem("productos", prod3)
-
-    carrito.push(prod3)
-
-    console.log(prod3);
-}) 
-
-console.log(carrito);
 
 
 
 for (producto of productos) {
 
     // SECTION
-
+    
 const section = document.querySelector("#productos")
 section.style.display = "flex"
 section.style.flexDirection = "column"
@@ -405,17 +358,6 @@ btn2.style.display = "flex"
 btn2.style.justifyContent = "center"
 btn2.style.alignItems = "center"
 
-// DIV-2
-
-let divIdTwo = document.createElement("div")
-divIdTwo.id = "divIdTwo"
-divIdTwo.style.display = "flex"
-divIdOne.style.flexDirection = "row"
-divIdOne.style.flexWrap = "wrap"
-divIdTwo.style.justifyContent = "center"
-divIdTwo.style.gap = "5rem"
-divIdTwo.style.width = "100%"
-
 // 3
 const divProdThree = document.createElement("div")
 divProdThree.id = "divProdThree"
@@ -495,11 +437,90 @@ btn4.style.display = "flex"
 btn4.style.justifyContent = "center"
 btn4.style.alignItems = "center"
 
+// 5
+const divProdFive = document.createElement("div")
+divProdFive.id = "divProdFive"
+divProdFive.style.width = "30rem"
+divProdFive.style.display = "flex"
+divProdFive.style.flexDirection = "column"
+divProdFive.style.padding = "1rem"
+divProdFive.style.boxShadow = "0rem 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.097)"
+divProdFive.style.justifyContent = "center"
+
+const imgFive = document.createElement("img")
+imgFive.id = "imgIdFive"
+imgFive.src = "../img/short-puma-negro.webp"
+imgFive.style.width = "100%"
+
+const h3Five = document.createElement("h3")
+let five = productos[4]
+h3Five.textContent = five.nombre 
+h3Five.style.padding = "1rem 0rem 0rem 0rem"
+h3Five.style.fontSize = "1.8rem"
+
+
+const h4Five = document.createElement("h4")
+h4Five.textContent = "$5.499" 
+h4Five.style.padding = "2rem 0rem 0rem 0rem"
+h4Five.style.fontSize = "1.2rem"
+
+const btn5 = document.createElement("button")
+btn5.id = "btnId5"
+btn5.textContent = "Agregar al carrito"
+btn5.style.backgroundColor = "black"
+btn5.style.color = "white"
+btn5.style.borderColor = "white"
+btn5.style.margin = "1rem 6rem"
+btn5.style.padding = "1rem"
+btn5.style.fontSize = "1.5rem"
+btn5.style.display = "flex"
+btn5.style.justifyContent = "center"
+btn5.style.alignItems = "center"
+
+// 6
+const divProdSix = document.createElement("div")
+divProdSix.id = "divProdSix"
+divProdSix.style.width = "30rem"
+divProdSix.style.display = "flex"
+divProdSix.style.flexDirection = "column"
+divProdSix.style.padding = "1rem"
+divProdSix.style.boxShadow = "0rem 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.097)"
+divProdSix.style.justifyContent = "center"
+
+const imgSix = document.createElement("img")
+imgSix.id = "imgIdSix"
+imgSix.src = "../img/campera-adidas-mangas.jpg"
+imgSix.style.width = "100%"
+
+const h3Six = document.createElement("h3")
+let six = productos[5]
+h3Six.textContent = six.nombre 
+h3Six.style.padding = "1rem 0rem 0rem 0rem"
+h3Six.style.fontSize = "1.8rem"
+
+
+const h4Six = document.createElement("h4")
+h4Six.textContent = "$27.999" 
+h4Six.style.padding = "2rem 0rem 0rem 0rem"
+h4Six.style.fontSize = "1.2rem"
+
+const btn6 = document.createElement("button")
+btn6.id = "btnId6"
+btn6.textContent = "Agregar al carrito"
+btn6.style.backgroundColor = "black"
+btn6.style.color = "white"
+btn6.style.borderColor = "white"
+btn6.style.margin = "1rem 6rem"
+btn6.style.padding = "1rem"
+btn6.style.fontSize = "1.5rem"
+btn6.style.display = "flex"
+btn6.style.justifyContent = "center"
+btn6.style.alignItems = "center"
+
 
 // DECLARO 
 
 section.appendChild(divIdOne)
-section.appendChild(divIdTwo)
 
 
 divIdOne.appendChild(divProdOne)
@@ -515,18 +536,121 @@ divProdTwo.appendChild(h3Two)
 divProdTwo.appendChild(h4Two)
 divProdTwo.appendChild(btn2)
 
-divIdTwo.appendChild(divProdThree)
+divIdOne.appendChild(divProdThree)
 divProdThree.appendChild(imgThree)
 divProdThree.appendChild(h3Three)
 divProdThree.appendChild(h4Three)
 divProdThree.appendChild(btn3)
 
-divIdTwo.appendChild(divProdFour)
+divIdOne.appendChild(divProdFour)
 divProdFour.appendChild(imgFour)
 divProdFour.appendChild(h3Four)
 divProdFour.appendChild(h4Four)
 divProdFour.appendChild(btn4)
 
+divIdOne.appendChild(divProdFive)
+divProdFive.appendChild(imgFive)
+divProdFive.appendChild(h3Five)
+divProdFive.appendChild(h4Five)
+divProdFive.appendChild(btn5)
 
+divIdOne.appendChild(divProdSix)
+divProdSix.appendChild(imgSix)
+divProdSix.appendChild(h3Six)
+divProdSix.appendChild(h4Six)
+divProdSix.appendChild(btn6)
+
+
+// EVENTOS BUTTON
+
+const button0 = document.querySelector("#btnId1")
+
+button0.addEventListener("click", () => {
+    carrito.push(productos[0])
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+    console.log(carrito);
+    alert("Has agregado correctamente tu producto al carrito")
+})
+
+
+const button1 = document.querySelector("#btnId2")
+
+button1.addEventListener("click", () => {
+    carrito.push(productos[1])
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+    console.log(carrito);
+    alert("Has agregado correctamente tu producto al carrito")
+})
+
+const button2 = document.querySelector("#btnId3")
+
+button2.addEventListener("click", () => {
+    carrito.push(productos[2])
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+    console.log(carrito);
+    alert("Has agregado correctamente tu producto al carrito")
+})
+
+const button3 = document.querySelector("#btnId4")
+
+button3.addEventListener("click", () => {
+    carrito.push(productos[3])
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+    console.log(carrito);
+    alert("Has agregado correctamente tu producto al carrito")
+})
+
+
+
+// RECUPERO CARRITO
+
+
+const totalEnvio = carrito.reduce((acc, el) => acc + el.precio, 999);
+        
+carrito.forEach(element => {
+    let carrito1 = document.querySelector("#carrito")
+    let divCarrito = document.createElement("div")
+        divCarrito.className = "carritoAgregado"
+        divCarrito.style.display = "flex"
+        divCarrito.style.justifyContent = "center"
+        divCarrito.style.fontSize = "2rem"
+        divCarrito.textContent = "Nombre: " + element.nombre + " Precio: " + element.precio
+        
+    let total = document.querySelector("#total")
+    let h5Total = document.createElement("h5")
+        h5Total.className = "totalCompra"
+        h5Total.textContent = "Total: " + totalCompra
+        
+    total.appendChild(h5Total)
+            
+    carrito1.appendChild(divCarrito)
+
+});
+
+    // FILTER
+
+    const adidas = document.querySelector("#filter")
+    adidas.style.display = "flex"
+
+    const h3Filter = document.createElement("h3")
+    h3Filter.id = "h3Filter"
+    h3Filter.textContent = "Adidas"
+
+    adidas.appendChild(h3Filter)
+
+    adidas.addEventListener("click", () => {
+        divProdFive.style.display = "none"
+    })
+    
 document.body(section)
 }
+
+
+
+
+
+
+
+
+
+
