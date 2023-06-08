@@ -554,13 +554,13 @@ img.carrito {
 }
 
 nav.navCarrito {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: white;
 }
 nav.navCarrito div.divCarrito {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: white;
 }
 nav.navCarrito div.divCarrito button.buttonCarrito {
-  border-color: rgba(255, 255, 255, 0);
+  border-color: white;
 }
 
 button#finalizarCompra {
@@ -903,6 +903,66 @@ div.logo-clubes img.clubes {
   h2.recomendados {
     padding: 10vh 0vw 5vh 0vw;
     font-size: 3vw;
+  }
+  section.productos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Raleway", sans-serif;
+    justify-content: center;
+    margin-bottom: 10vh;
+    gap: 10vw;
+  }
+  section.productos div.productos-1 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 6vw;
+  }
+  section.productos div.productos-1 div.productos {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1vw;
+    box-shadow: 0vh 0vw 0.5vh 0.5vw rgba(0, 0, 0, 0.097);
+  }
+  section.productos div.productos-1 div.productos:hover {
+    transform: scale(1.01);
+    transition: 1s;
+  }
+  section.productos div.productos-1 div.productos img.productos {
+    display: flex;
+    width: 100%;
+  }
+  section.productos div.productos-1 div.productos h3.productos {
+    display: flex;
+    padding: 1vh 0vw 0vh 0vw;
+    font-size: 1.8vw;
+  }
+  section.productos div.productos-1 div.productos h4.productos {
+    display: flex;
+    padding: 2vh 0vw 0vh 0vw;
+    margin: 0vw;
+    font-size: 1.2vw;
+  }
+  section.productos div.productos-1 div.productos button.btnProd {
+    background-color: black;
+    color: white;
+    border-color: white;
+    margin: 1vh 6vw;
+    padding: 1vw;
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  section.productos div.productos-1 div.productos button.btnProd:hover {
+    background-color: rgba(0, 0, 0, 0.071);
+    color: black;
+    transition: 1.2s;
   }
   section#sectionGlobal {
     display: flex;

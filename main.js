@@ -122,8 +122,9 @@ function agregarAlCarrito(indice) {
         position: "left", // `left`, `center` or `right`
         stopOnFocus: true, // Prevents dismissing of toast on hover
         style: {
-            color: "white",
-            background: "rgba(17, 255, 0, 0.441)",
+            color: "black",
+            //background: "rgba(17, 255, 0, 0.441)",
+            background: "rgba(0, 0, 0, 0.068)",
             fontSize: "1.5rem",
         },
         onClick: function(){} // Callback after click
