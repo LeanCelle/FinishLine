@@ -34,10 +34,6 @@
                     <img class="inicio-sesion" src="./img/usuario.png" alt="Inicio de sesion">
                     <p class="inicio-sesion">INGRESA O REGISTRATE</p>
                 </div>
-                <div class="mi-compra">
-                    <img class="carrito" src="./img/carrito.png" alt="Carrito">
-                    <p class="carrito">Mi Carrito</p>
-                </div>
             </div>
             <nav class="nav">
                 <ul class="nav">
@@ -48,6 +44,21 @@
                 </ul>
             </nav>
         </div>
+        <nav class="navbar bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <img class="carrito" src="../img/carrito.png" alt="Carrito">
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Mi Carrito</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body carritoAgregado">
+                </div>
+                <div id="totalCompra"></div>
+          </nav>
     </header>
 
     <main>

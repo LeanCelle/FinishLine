@@ -74,7 +74,7 @@ header.header-index {
         }
         input.header {
             display: flex;
-            width: 80%;
+            width: 100%;
             font-size: 1.5rem;
             padding: 0.5rem 0rem 0.5rem 0rem;
             text-align: center;
@@ -84,31 +84,15 @@ header.header-index {
             border: white solid;
         }
         div.inicio-sesion {
-            width: 50%;
+            width: 100%;
             display: flex;
             align-items: center;
-            justify-content: end;
+            justify-content: center;
             gap: 1rem;
             img.inicio-sesion {
                 width: 2.5rem;
             }
             p.inicio-sesion {
-                font-size: 1.5rem;
-                font-family: 'Raleway', sans-serif;
-                color: white;
-                margin: 0rem;
-            }
-        }
-        div.mi-compra {
-            width: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            img.carrito {
-                width: 2.5rem;
-            }
-            p.carrito {
                 font-size: 1.5rem;
                 font-family: 'Raleway', sans-serif;
                 color: white;

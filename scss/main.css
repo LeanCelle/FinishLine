@@ -92,7 +92,7 @@ header.header-index div.header2 a img.logo {
 }
 header.header-index div.header2 input.header {
   display: flex;
-  width: 80%;
+  width: 100%;
   font-size: 1.5rem;
   padding: 0.5rem 0rem 0.5rem 0rem;
   text-align: center;
@@ -102,32 +102,16 @@ header.header-index div.header2 input.header {
   border: white solid;
 }
 header.header-index div.header2 div.inicio-sesion {
-  width: 50%;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
   gap: 1rem;
 }
 header.header-index div.header2 div.inicio-sesion img.inicio-sesion {
   width: 2.5rem;
 }
 header.header-index div.header2 div.inicio-sesion p.inicio-sesion {
-  font-size: 1.5rem;
-  font-family: "Raleway", sans-serif;
-  color: white;
-  margin: 0rem;
-}
-header.header-index div.header2 div.mi-compra {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-header.header-index div.header2 div.mi-compra img.carrito {
-  width: 2.5rem;
-}
-header.header-index div.header2 div.mi-compra p.carrito {
   font-size: 1.5rem;
   font-family: "Raleway", sans-serif;
   color: white;
@@ -509,6 +493,89 @@ section.productos div.productos-1 div.productos button.btnProd:hover {
   transition: 1.2s;
 }
 
+section#sectionGlobal {
+  display: flex;
+}
+section#sectionGlobal section#filtros {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+  align-items: center;
+  text-decoration: underline;
+  gap: 3rem;
+  cursor: pointer;
+}
+section#sectionGlobal section#container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  gap: 10rem;
+  justify-content: center;
+  margin-bottom: 10rem;
+}
+section#sectionGlobal section#container div.divProductos-1 {
+  box-shadow: 0rem 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.071);
+}
+section#sectionGlobal section#container div.divProductos-1:hover {
+  transition: 1s;
+  transform: scale(1.01);
+}
+
+a.boton {
+  background-color: black;
+  border-color: white;
+  font-size: 1rem;
+}
+a.boton:hover {
+  transition: 1s;
+  background-color: rgb(219, 219, 219);
+  border-color: white;
+  color: rgba(0, 0, 0, 0.678);
+}
+
+div.divProdAgregados {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+div.divProdAgregados img.imgProdAgregados {
+  width: 10rem;
+}
+
+#totalCompra {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+img.carrito {
+  width: 2.5rem;
+}
+
+nav.navCarrito {
+  background-color: rgba(0, 0, 0, 0);
+}
+nav.navCarrito div.divCarrito {
+  background-color: rgba(0, 0, 0, 0);
+}
+nav.navCarrito div.divCarrito button.buttonCarrito {
+  border-color: rgba(255, 255, 255, 0);
+}
+
+button#finalizarCompra {
+  color: white;
+  background-color: rgba(17, 255, 0, 0.441);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: white;
+  border-radius: 1rem;
+  font-size: 2rem;
+  margin: 2rem;
+  padding: 1rem;
+}
+
 div.cancha-verde {
   background-image: url(../img/cancha-verde-adidas.webp);
   background-size: 100% 100%;
@@ -837,41 +904,35 @@ div.logo-clubes img.clubes {
     padding: 10vh 0vw 5vh 0vw;
     font-size: 3vw;
   }
-  section.productos {
+  section#sectionGlobal {
+    display: flex;
+    flex-direction: column;
+  }
+  section#sectionGlobal section#filtros {
+    display: flex;
+    flex-direction: row;
     width: 100%;
-    margin-bottom: 15vh;
-    gap: 10vw;
+    align-items: center;
+    text-decoration: underline;
+    gap: 2vw;
+    justify-content: center;
   }
-  section.productos div.productos-1 {
+  section#sectionGlobal section#container {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    padding: 0vh 2vw;
-    gap: 5vw;
+    gap: 6vw;
+    justify-content: center;
+    margin-bottom: 10vh;
   }
-  section.productos div.productos-1 div.productos {
-    width: 30vw;
-    padding: 1vw;
-    box-shadow: 0vh 0vw 0.5vh 0.5vw rgba(0, 0, 0, 0.097);
+  section#sectionGlobal section#container div.divProductos-1 {
+    width: 100%;
+    margin: 4vw;
+    box-shadow: 0vh 0vw 0.5vh 0.5vw rgba(0, 0, 0, 0.071);
   }
-  section.productos div.productos-1 div.productos:hover {
-    transform: scale(1.01);
+  section#sectionGlobal section#container div.divProductos-1:hover {
     transition: 1s;
-  }
-  section.productos div.productos-1 div.productos img.productos {
-    width: 100%;
-  }
-  section.productos div.productos-1 div.productos h3.productos {
-    padding: 1vh 0vw 0vh 0vw;
-    font-size: 1.8vw;
-  }
-  section.productos div.productos-1 div.productos h4.productos {
-    padding: 2vh 0vw 0vh 0vw;
-    margin: 0vw;
-    font-size: 1.2vw;
-  }
-  section.productos div.productos-1 div.productos button.btnProd {
-    margin: 1vh 6vw;
-    padding: 1vw;
-    font-size: 1.5vw;
+    transform: scale(1.01);
   }
   /* MUJER */
   div.cancha-verde {

@@ -77,3 +77,89 @@ section.productos {
         }
     }
 }
+
+section#sectionGlobal {
+    display: flex;
+    section#filtros {
+        display: flex;
+        flex-direction: column;
+        width: 10%;
+        align-items: center;
+        text-decoration: underline;
+        gap: 3rem;
+        cursor: pointer;
+    }
+    section#container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        gap: 10rem;
+        justify-content: center;
+        margin-bottom: 10rem;
+        div.divProductos-1 {
+            box-shadow: 0rem 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.071);
+            &:hover {
+                transition: 1s;
+                transform: scale(1.01);
+            }
+        }
+    }
+}
+
+
+
+a.boton {
+    background-color: black;
+    border-color: white;
+    font-size: 1rem;
+    &:hover {
+        transition: 1s;
+        background-color: rgb(219, 219, 219);
+        border-color: white;
+        color: rgba(0, 0, 0, 0.678);
+    }
+}
+
+
+div.divProdAgregados {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    img.imgProdAgregados {
+        width: 10rem;
+    }
+}
+
+#totalCompra {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+img.carrito {
+    width: 2.5rem;
+}
+
+nav.navCarrito {
+    background-color: rgba(0, 0, 0, 0);
+    div.divCarrito {
+        background-color: rgba(0, 0, 0, 0);
+        button.buttonCarrito {
+            border-color: rgba(255, 255, 255, 0);
+        }
+    }
+}
+
+button#finalizarCompra {
+    color: white;
+    background-color: rgba(17, 255, 0, 0.441);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: white;
+    border-radius: 1rem;
+    font-size: 2rem;
+    margin: 2rem;
+    padding: 1rem;
+}

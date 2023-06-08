@@ -316,39 +316,32 @@
         padding: 10vh 0vw 5vh 0vw;
         font-size: 3vw;
     }
-    
-    section.productos {
-        width: 100%;
-        margin-bottom: 15vh;
-        gap: 10vw;
-        div.productos-1 {
+    section#sectionGlobal {
+        display: flex;
+        flex-direction: column;
+        section#filtros {
+            display: flex;
+            flex-direction: row;
             width: 100%;
-            padding: 0vh 2vw;
-            gap: 5vw;
-            div.productos {
-                width: 30vw;
-                padding: 1vw;
-                box-shadow: 0vh 0vw 0.5vh 0.5vw rgba(0, 0, 0, 0.097);
+            align-items: center;
+            text-decoration: underline;
+            gap: 2vw;
+            justify-content: center;
+        }
+        section#container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            gap: 6vw;
+            justify-content: center;
+            margin-bottom: 10vh;
+            div.divProductos-1 {
+                width: 100%;
+                margin: 4vw;
+                box-shadow: 0vh 0vw 0.5vh 0.5vw rgba(0, 0, 0, 0.071);
                 &:hover {
-                    transform: scale(1.01);
                     transition: 1s;
-                }
-                img.productos {
-                    width: 100%;
-                }
-                h3.productos {
-                    padding: 1vh 0vw 0vh 0vw;
-                    font-size: 1.8vw;
-                }
-                h4.productos {
-                    padding: 2vh 0vw 0vh 0vw;
-                    margin: 0vw;
-                    font-size: 1.2vw;
-                }
-                button.btnProd {
-                    margin: 1vh 6vw;
-                    padding: 1vw;
-                    font-size: 1.5vw;
+                    transform: scale(1.01);
                 }
             }
         }
