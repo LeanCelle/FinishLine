@@ -239,7 +239,7 @@ const terminoCompra = document.querySelector("#terminoCompra");
 terminoCompra.addEventListener("click", () => {
   if (
     inputNombre.value === "" || inputApellido.value === "" || inputDireccion.value === "" || inputCorreo.value === "" || inputCorreoTwo.value === "") {
-    alert("Debes completar todos los campos del formulario.");
+    console.log("Debes completar todos los campos del formulario.");
   } else {
     Swal.fire(
       'Compra finalizada!',
