@@ -151,15 +151,22 @@ nav.navCarrito {
     }
 }
 
-button#finalizarCompra {
-    color: white;
-    background-color: rgba(17, 255, 0, 0.441);
+a.a-FinalizarCompra {
+    background-color: rgba(0, 0, 0, 0.045);
     display: flex;
+    width: 100%;
+    text-decoration: none;
     justify-content: center;
-    align-items: center;
-    border-color: white;
-    border-radius: 1rem;
-    font-size: 2rem;
-    margin: 2rem;
-    padding: 1rem;
+    button#finalizarCompra {
+        color: white;
+        background-color: rgb(89, 255, 95);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 1rem;
+        font-size: 2rem;
+        margin: 2rem;
+        padding: 1rem;
+    }
 }

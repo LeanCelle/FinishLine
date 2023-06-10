@@ -563,13 +563,20 @@ nav.navCarrito div.divCarrito button.buttonCarrito {
   border-color: white;
 }
 
-button#finalizarCompra {
+a.a-FinalizarCompra {
+  background-color: rgba(0, 0, 0, 0.045);
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  justify-content: center;
+}
+a.a-FinalizarCompra button#finalizarCompra {
   color: white;
-  background-color: rgba(17, 255, 0, 0.441);
+  background-color: rgb(89, 255, 95);
   display: flex;
   justify-content: center;
   align-items: center;
-  border-color: white;
+  border: none;
   border-radius: 1rem;
   font-size: 2rem;
   margin: 2rem;
@@ -619,6 +626,28 @@ div.logo-clubes {
 }
 div.logo-clubes img.clubes {
   width: 10rem;
+}
+
+h1.h1FinalizarCompra {
+  text-align: center;
+  margin: 5rem 0rem 0rem 0rem;
+}
+
+input.inputform {
+  text-align: center;
+  padding: 1rem 5rem;
+  border-radius: 0.5rem;
+  border-color: rgba(0, 0, 0, 0.204);
+}
+
+button#terminoCompra {
+  background-color: rgba(13, 255, 0, 0.526);
+  color: white;
+  display: block;
+  padding: 1rem 3rem;
+  margin: 3rem auto;
+  font-size: 1.5rem;
+  border: solid white;
 }
 
 /* MOBILE */
