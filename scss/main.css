@@ -257,7 +257,7 @@ section.app-mockup div.mockup img.mockup {
 .slider .slide-track {
   display: flex;
   animation: scroll 10s linear infinite;
-  -webkit-animation: scroll 10s linear infinite;
+  -webkit-animation: scroll 20s linear infinite;
   width: 420rem;
 }
 .slider .slide-track .slide {
@@ -554,13 +554,13 @@ img.carrito {
 }
 
 nav.navCarrito {
-  background-color: white;
+  background-color: rgb(239, 239, 239);
 }
 nav.navCarrito div.divCarrito {
-  background-color: white;
+  background-color: rgb(239, 239, 239);
 }
 nav.navCarrito div.divCarrito button.buttonCarrito {
-  border-color: white;
+  border-color: rgb(239, 239, 239);
 }
 
 a.a-FinalizarCompra {
@@ -654,7 +654,7 @@ button#terminoCompra {
 /* INICIO */
 @media (max-width: 576px) {
   header.header-index div.barra-superior {
-    padding: 0.5vh 0vw;
+    padding: 2vh 0vw;
   }
   header.header-index div.barra-superior div.barra-superior1 {
     gap: 1vw;
@@ -737,7 +737,7 @@ button#terminoCompra {
     padding: 10vh 0vw 5vh 0vw;
   }
   section.cambio {
-    padding: 10vh 0vw 0vh 0vw;
+    padding: 0vh 0vw 0vh 0vw;
   }
   section.cambio div.cambio0 div.cambio {
     width: 100%;
@@ -794,7 +794,7 @@ button#terminoCompra {
   }
   .slider .slide-track {
     animation: scroll 10s linear infinite;
-    -webkit-animation: scroll 10s linear infinite;
+    -webkit-animation: scroll 30s linear infinite;
     width: 420vw;
   }
   .slider .slide-track .slide {
@@ -931,7 +931,7 @@ button#terminoCompra {
   }
   h2.recomendados {
     padding: 10vh 0vw 5vh 0vw;
-    font-size: 3vw;
+    font-size: 5vw;
   }
   section.productos {
     width: 100%;

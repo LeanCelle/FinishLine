@@ -30,10 +30,8 @@ let productos = [
     {id: 28, nombre: "Remera Lotto Pride", marca: "Lotto", precio: 4999, talle: "L", prenda: "Remera", imagen: "../img/remera-lotto-pride.jpg", seccion: "mujer"},
     {id: 29, nombre: "Pollera Tenis Fila Basic Mujer", marca: "Fila", precio: 11999, talle: "S", prenda: "Pollera", imagen: "../img/pollera-fila-blanca.jpg", seccion: "mujer"},
     {id: 30, nombre: "Pollera adidas Club Tennis", marca: "Adidas", precio: 17999, talle: "M", prenda: "Pollera", imagen: "../img/pollera-adidas-negra.jpg", seccion: "mujer"},
-    {id: 31, nombre: "../img/zapatillas-nike-pipa-rosa.jpg", marca: "Nike", precio: 33999, talle: "39", prenda: "Zapatillas", imagen: "../img/zapatillas-adidas-leopardo.webp", seccion: "mujer"},
+    {id: 31, nombre: "Zapatillas Nike Pipa rosa", marca: "Nike", precio: 33999, talle: "39", prenda: "Zapatillas", imagen: "../img/zapatillas-nike-pipa-rosa.jpg", seccion: "mujer"},
     {id: 32, nombre: "Zapatillas Adidas Streetcheck Cloudfoam", marca: "Adidas", precio: 32999, talle: "38", prenda: "Zapatillas", imagen: "../img/zapatillas-adidas-floreadas.jpg" , seccion: "mujer"},
-    {id: 33, nombre: "Zapatillas adidas Run 70s De Mujer", marca: "Adidas", precio: 30999, talle: "38", prenda: "Zapatillas", imagen: "../img/zapatillas-adidas-leopardo.webp", seccion: "mujer"},
-    {id: 34, nombre: "Zapatillas adidas Run 70s De Mujer", marca: "Adidas", precio: 30999, talle: "38", prenda: "Zapatillas", imagen: "../img/zapatillas-adidas-leopardo.webp", seccion: "mujer"},
   ]
     
   // Carrito

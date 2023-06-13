@@ -242,7 +242,7 @@ section.app-mockup {
     .slide-track {
         display: flex;
         animation: scroll 10s linear infinite;
-        -webkit-animation: scroll 10s linear infinite;
+        -webkit-animation: scroll 20s linear infinite;
         width: calc(15rem * 28);
         .slide {
             width: 15rem;

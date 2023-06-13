@@ -5,7 +5,7 @@
 @media (max-width: 576px) {
     header.header-index {
         div.barra-superior {
-            padding: 0.5vh 0vw;
+            padding: 2vh 0vw;
             div.barra-superior1 {
                 gap: 1vw;
                 img.gmail-superior {
@@ -96,7 +96,7 @@
     }
     
     section.cambio {
-        padding: 10vh 0vw 0vh 0vw;
+        padding: 0vh 0vw 0vh 0vw;
         div.cambio0 {
             div.cambio {
                 width: 100%;
@@ -159,7 +159,7 @@
         width: 90%;
         .slide-track {
             animation: scroll 10s linear infinite;
-            -webkit-animation: scroll 10s linear infinite;
+            -webkit-animation: scroll 30s linear infinite;
             width: calc(15vw * 28);
             .slide {
                 width: 15vw;
@@ -314,7 +314,7 @@
     
     h2.recomendados {
         padding: 10vh 0vw 5vh 0vw;
-        font-size: 3vw;
+        font-size: 5vw;
     }
 
     section.productos {
