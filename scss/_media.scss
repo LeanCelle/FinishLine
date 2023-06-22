@@ -51,15 +51,15 @@
                 border-radius: 4vw;
             }
             div.inicio-sesion {
-                width: 70%;
                 gap: 1vw;
-                justify-content: end;
-                img.inicio-sesion {
-                    width: 2.5vw;
-                }
-                p.inicio-sesion {
-                    font-size: 1.5vw;
-                    margin: 0vw;
+                a {
+
+                    img.inicio-sesion {
+                        width: 2.5vw;
+                    }
+                    p.inicio-sesion {
+                        font-size: 1.5vw;
+                    }
                 }
             }
             div.mi-compra {
@@ -446,5 +446,15 @@
         img.clubes {
             width: 10vw;
         }
+    }
+
+
+
+
+    /* FINALIZAR COMPRA */
+
+
+    section#sectionForm {
+        flex-direction: column;
     }
 }

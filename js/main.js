@@ -32,6 +32,22 @@ let productos = [
   {id: 30, nombre: "Pollera adidas Club Tennis", marca: "Adidas", precio: 17999, talle: "M", prenda: "Pollera", imagen: "../img/pollera-adidas-negra.jpg", seccion: "mujer"},
   {id: 31, nombre: "Zapatillas Nike Pipa rosa", marca: "Nike", precio: 33999, talle: "39", prenda: "Zapatillas", imagen: "../img/zapatillas-nike-pipa-rosa.jpg", seccion: "mujer"},
   {id: 32, nombre: "Zapatillas Adidas Streetcheck Cloudfoam", marca: "Adidas", precio: 32999, talle: "38", prenda: "Zapatillas", imagen: "../img/zapatillas-adidas-floreadas.jpg" , seccion: "mujer"},
+  {id: 33, nombre: "Zapatillas Topper X Forcer", marca: "Topper", precio: 14599, talle: "21", prenda: "Zapatillas", imagen: "../img/zapatillas-topper-blancas.jpg", seccion: "niños"},
+  {id: 34, nombre: "Zapatillas Atomik Beta Pro", marca: "Atomik ", precio: 8299, talle: "21", prenda: "Zapatillas", imagen: "../img/zapatillas-atomik.jpg", seccion: "niños"},
+  {id: 35, nombre: "Campera Nike Sportswear Icon Clash Windrunner Nena", marca: "Nike", precio: 28999, talle: "L", prenda: "Campera", imagen: "../img/campera-azul-dibujos.jpg", seccion: "niños"}, 
+  {id: 36, nombre: "Campera Topper Br Puffer II", marca: "Topper", precio: 28979, talle: "L", prenda: "Campera", imagen: "../img/campera-canelones-ninos.jpg", seccion: "niños"},
+  {id: 37, nombre: "Remera adidas B Club 3 Tiras", marca: "Adidas", precio: 33099, talle: "S", prenda: "Remera", imagen: "../img/remera-adidas-ninos.jpg", seccion: "niños"},
+  {id: 38, nombre: "Remera Gilbert Térmica Infantil", marca: "Gilbert", precio: 8999, talle: "M", prenda: "Remera", imagen: "../img/termica-blanca-ninos.jpg", seccion: "niños"},
+  {id: 39, nombre: "Remera Fila Animal", marca: "Fila", precio: 5350, talle: "M", prenda: "Remera", imagen: "../img/remera-fila-ninos.jpg", seccion: "niños"},
+  {id: 40, nombre: "Bermuda Topper Rtc", marca: "Topper", precio: 7199, talle: "L", prenda: "Bermuda", imagen: "../img/bermuda-topper-rosa.jpg", seccion: "niños"},
+  {id: 41, nombre: "Bikini Hydro Painting", marca: "Hydro", precio: 7599, talle: "S", prenda: "Malla", imagen: "../img/malla-ninos.jpg", seccion: "niños"},
+  {id: 42, nombre: "Pantalón Nike Sportswear Club Fleece", marca: "Nike", precio: 12499, talle: "L", prenda: "Pantalon", imagen: "../img/pantalon-nike-ninos.jpg", seccion: "niños"},
+  {id: 43, nombre: "Pantalón adidas X Disney Pixar Monsters", marca: "Adidas", precio: 9999, talle: "M", prenda: "Pantalon", imagen: "../img/pantalon-adidas-ninos.jpg", seccion: "niños"},
+  {id: 44, nombre: "Calza adidas Designed To Move", marca: "Adidas", precio: 5499, talle: "M", prenda: "Calza", imagen: "../img/calza-ninos.jpg", seccion: "niños"},
+  {id: 45, nombre: "Calza adidas Marimekko Believe", marca: "Adidas", precio: 15999, talle: "S", prenda: "Calza", imagen: "../img/calza-floreada-ninos.jpg", seccion: "niños"},
+  {id: 46, nombre: "Zapatillas Puma Rebound Layup", marca: "Puma", precio: 26199, talle: "22", prenda: "Zapatillas", imagen: "../img/zapatillas-puma-ninos.jpg", seccion: "niños"},
+  {id: 47, nombre: "Zapatillas Puma Wired Run", marca: "Puma", precio: 13199, talle: "23", prenda: "Zapatillas", imagen: "../img/zapatillas-puma-azul-ninos.jpg", seccion: "niños"},
+  {id: 48, nombre: "Zapatillas de Running Nike Star Runner 3 Mujer", marca: "Nike", precio: 26999, talle: "23", prenda: "Zapatillas", imagen: "../img/zapatillas-nike-celestes-ninos.jpg", seccion: "niños"},
 ]
   
 // Carrito
@@ -63,15 +79,17 @@ productos.forEach((producto, indice) => {
   
 // Filtro productos por marca
 function filtrarPorMarca(marca) {
-    const contenedor = document.getElementById("container");
-    contenedor.innerHTML = "";
-    
-    const filtroMarca = productos.filter((p) => p.marca === marca && p.seccion === "hombre");
-    filtroMarca.forEach((producto, indice) => {
-      const card = crearTarjeta(producto, indice);
-      contenedor.appendChild(card);
-    });
+  const contenedor = document.getElementById("container");
+  contenedor.innerHTML = "";
+
+  const filtroMarca = productos.filter((p) => p.marca === marca && p.prenda === "Remera" && p.seccion === "hombre");
+  filtroMarca.forEach((producto) => {
+    const indice = productos.indexOf(producto);
+    const card = crearTarjeta(producto, indice);
+    contenedor.appendChild(card);
+  });
 }
+
   
 // Agrego eventos de click a los filtros
 const filtroNike = document.getElementById("filtro-nike");
@@ -101,26 +119,53 @@ function mostrarTodos() {
       contenedor.appendChild(card);
     });
 }
+
   
 // Agrego evento de click al botón eliminar filtros
 const eliminarFiltros = document.getElementById("eliminar-filtros");
 eliminarFiltros.addEventListener("click", mostrarTodos);
-  
+
+
 // Mostrar todos los productos al cargar la página
 window.addEventListener("load", mostrarTodos);
-  
+
+
 // Actualizar el precio total de la compra
 function actualizarTotal() {
-    const totalCompra = carritoCompras.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
-    const precioTotal = document.querySelector("#totalCompra");
-    precioTotal.textContent = `TOTAL: $${totalCompra}`;
-    precioTotal.style.fontWeight = "bold"
+  const envio = document.querySelector("#envio");
+  let totalCompra = carritoCompras.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
+
+  if (totalCompra <= 29999) {
+    envio.innerHTML = `<p class="p-envio"><em>Envío: $999</em></p>`;
+    totalCompra += 999;
+  } else {
+    envio.innerHTML = ``;
+  }
+
+  if (totalCompra === 999) {
+    envio.innerHTML = ``
+    totalCompra = 0;
+  }
+
+  const precioTotal = document.querySelector("#totalCompra");
+  precioTotal.textContent = `TOTAL: $${totalCompra}`;
+  precioTotal.style.fontWeight = "bold";
+}
+
+
+
+// Contador carrito
+function actualizarContadorCarrito() {
+  const contador = document.getElementById("contadorCarrito");
+  const totalProductos = carritoCompras.reduce((acc, producto) => acc + producto.cantidad, 0);
+  contador.textContent = totalProductos;
 }
   
 // Agregar producto al carrito
 function agregarAlCarrito(indice) {
-    const producto = productos[indice];
-    const productoExistente = carritoCompras.find((item) => item.id === producto.id);
+  const producto = productos[indice];
+  const productoExistente = carritoCompras.find((item) => item.id === producto.id);
+
   
     if (productoExistente) {
       productoExistente.cantidad++;
@@ -149,6 +194,7 @@ function agregarAlCarrito(indice) {
   
     guardarCarritoEnLocalStorage();
     actualizarCarritoEnPantalla();
+    actualizarContadorCarrito(); 
 }
   
 // Guardar carrito en el almacenamiento local
@@ -162,6 +208,7 @@ window.addEventListener("load", () => {
     if (carritoGuardado) {
       carritoCompras = JSON.parse(carritoGuardado);
       actualizarCarritoEnPantalla();
+      actualizarContadorCarrito();
     }
 });
   
@@ -196,18 +243,53 @@ function eliminarDelCarrito(indice) {
   
     guardarCarritoEnLocalStorage();
     actualizarCarritoEnPantalla();
+    actualizarContadorCarrito()
 }
 
 
+// Filtro barra de búsqueda
+const barraBusqueda = document.querySelector("#barraBusqueda");
 
-//
+function busqueda(prenda) {
+  const contenedor = document.getElementById("container");
+  contenedor.innerHTML = "";
+  
+  const filtroPrenda = productos.filter((p) => p.prenda === prenda && p.seccion === "hombre");
+
+  filtroPrenda.forEach((producto, indice) => {
+    const card = crearTarjeta(producto, indice);
+    contenedor.appendChild(card);
+  });
+}
+
+barraBusqueda.addEventListener("input", () => {
+  if (barraBusqueda.value.toLowerCase() === "remera") {
+    busqueda("Remera");
+  } else {
+    return;
+  }
+});
+
+barraBusqueda.addEventListener("input", () => {
+  if (barraBusqueda.value.toLowerCase() === "pantalon") {
+    busqueda("Pantalon");
+  } else {
+    return;
+  }
+});
 
 
+// Inicio de sesion o registrate
 
+const usuario = localStorage.getItem("usuario");
+const nombreUsuario = usuario ? JSON.parse(usuario) : null;
+console.log(nombreUsuario);
 
+const inputIndex = document.querySelector("p.inicio-sesion");
 
+if (!nombreUsuario) {
+  inputIndex.innerHTML = `<p class="usuarioIndex">INGRESA O REGISTRATE</p>`;
+} else {
+  inputIndex.innerHTML = `<p class="usuarioIndex">${nombreUsuario}</p>`;
 
-
-
-
-
+}

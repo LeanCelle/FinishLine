@@ -29,11 +29,11 @@
         </div>
         <div class="header">
             <div class="header2">
-                <a href="../index.html"><img class="logo" src="../img/logo-finishline.png" alt="FinishLine"></a>
-                <input class="header" type="search" placeholder="¿Qué estás buscando?">
+                <a href="../index.html"><img class="logo" src="../img/logo-finishline-transparente.png" alt="FinishLine"></a>
+                <input id="barraBusqueda" class="header" type="search" placeholder="¿Qué estás buscando?">
                 <div class="inicio-sesion">
-                    <img class="inicio-sesion" src="../img/usuario.png" alt="Inicio de sesion">
-                    <p class="inicio-sesion">INGRESA O REGISTRATE</p>
+                    <a href="./iniciosesion.html"><img class="inicio-sesion" src="../img/usuario.png" alt="Inicio de sesion"></a>
+                    <a href="./iniciosesion.html"><p class="inicio-sesion">INGRESA O REGISTRATE</p></a>
                 </div>
             </div>
             <nav class="nav">
@@ -50,6 +50,7 @@
               <a class="navbar-brand" href="#"></a>
               <button class="navbar-toggler buttonCarrito" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <img class="carrito" src="../img/carrito.png" alt="Carrito">
+                <span id="contadorCarrito"></span>
               </button>
               <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
@@ -58,6 +59,7 @@
                 </div>
                 <div class="offcanvas-body carritoAgregado">
                 </div>
+                <div id="envio"></div>
                 <div id="totalCompra"></div>
                 <a class="a-FinalizarCompra" href="./finalizarcompra.html"><button id="finalizarCompra">Finalizar Compra</button></a>
           </nav>
