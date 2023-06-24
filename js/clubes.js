@@ -12,7 +12,7 @@ fetch("../data.json")
   .then((res) => res.json())
   .then((data) => {
     productos = data;
-    productosFiltrados = productos.filter((producto, indice) => indice >= 49);
+    productosFiltrados = productos.filter((producto, indice) => indice >= 48);
     mostrarTodos(); // Mostrar todos los productos al cargar la página
   })
 
@@ -53,20 +53,16 @@ function mostrarTodos() {
 
 // Filtro productos por marca
 function filtrarPorMarca(marca) {
-  contenedor.innerHTML = "";
-
-  const filtroMarca = productos.filter(
-    (p) => p.marca === marca && p.seccion === "clubes"
-  );
-
-  filtroMarca.forEach((producto) => {
-    const indice = productos.indexOf(producto);
-    const card = crearTarjeta(producto, indice);
-    if (card) {
+    const contenedor = document.getElementById("container");
+    contenedor.innerHTML = "";
+  
+    const filtroMarca = productosFiltrados.filter((p) => p.marca === marca && p.seccion === "clubes");
+    filtroMarca.forEach((producto) => {
+      const indice = productosFiltrados.indexOf(producto);
+      const card = crearTarjeta(producto, indice);
       contenedor.appendChild(card);
-    }
-  });
-}
+    });
+  }
   
   // Agrego eventos de click a los elementos <h5> de los filtros
   const filtroNike = document.getElementById("filtro-nike");
@@ -84,7 +80,7 @@ function filtrarPorMarca(marca) {
     const contenedor = document.getElementById("container");
     contenedor.innerHTML = "";
   
-    const productosMostrados = productosFiltrados.filter((producto) => producto.seccion === "clubes");
+    const productosMostrados = productos.filter((producto) => producto.seccion === "clubes");
   
     productosMostrados.forEach((producto, indice) => {
       const card = crearTarjeta(producto, indice);
@@ -131,7 +127,7 @@ function filtrarPorMarca(marca) {
   // Agregar producto al carrito
   function agregarAlCarrito(indice) {
     const productoFiltrado = productosFiltrados[indice];
-    const productoExistente = carritoCompras.find((item) => item.nombre === productoFiltrado.nombre);
+    const productoExistente = carritoCompras.find((item) => item.id === productoFiltrado.id);
   
     if (productoExistente) {
       productoExistente.cantidad++;

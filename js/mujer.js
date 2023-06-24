@@ -12,7 +12,7 @@ fetch("../data.json")
   .then((res) => res.json())
   .then((data) => {
     productos = data;
-    productosFiltrados = productos.filter((producto, indice) => indice >= 18);
+    productosFiltrados = productos.filter((producto, indice) => indice >= 16);
     mostrarTodos(); // Mostrar todos los productos al cargar la página
   })
 
@@ -53,18 +53,14 @@ function mostrarTodos() {
 
 // Filtro productos por marca
 function filtrarPorMarca(marca) {
+  const contenedor = document.getElementById("container");
   contenedor.innerHTML = "";
 
-  const filtroMarca = productos.filter(
-    (p) => p.marca === marca && p.seccion === "mujer"
-  );
-
+  const filtroMarca = productosFiltrados.filter((p) => p.marca === marca && p.seccion === "mujer");
   filtroMarca.forEach((producto) => {
-    const indice = productos.indexOf(producto);
+    const indice = productosFiltrados.indexOf(producto);
     const card = crearTarjeta(producto, indice);
-    if (card) {
-      contenedor.appendChild(card);
-    }
+    contenedor.appendChild(card);
   });
 }
 
@@ -83,18 +79,18 @@ filtroTopper.addEventListener("click", () => filtrarPorMarca("Topper"));
 filtroLotto.addEventListener("click", () => filtrarPorMarca("Lotto"));
 filtroFila.addEventListener("click", () => filtrarPorMarca("Fila"));
 
-  // Mostrar todos los productos
-  function mostrarTodos() {
-    const contenedor = document.getElementById("container");
-    contenedor.innerHTML = "";
-  
-    const productosMostrados = productosFiltrados.filter((producto) => producto.seccion === "mujer");
-  
-    productosMostrados.forEach((producto, indice) => {
-      const card = crearTarjeta(producto, indice);
-      contenedor.appendChild(card);
-    });
-  }
+// Mostrar todos los productos
+function mostrarTodos() {
+  const contenedor = document.getElementById("container");
+  contenedor.innerHTML = "";
+
+  const productosMostrados = productos.filter((producto) => producto.seccion === "mujer");
+
+  productosMostrados.forEach((producto, indice) => {
+    const card = crearTarjeta(producto, indice);
+    contenedor.appendChild(card);
+  });
+}
 
 // Agregar evento de clic al elemento <h5> del botón de eliminar filtros
 const eliminarFiltros = document.getElementById("eliminar-filtros");
@@ -134,15 +130,15 @@ function actualizarContadorCarrito() {
 
 // Agregar producto al carrito
 function agregarAlCarrito(indice) {
-   const productoFiltrado = productosFiltrados[indice];
-    const productoExistente = carritoCompras.find((item) => item.nombre === productoFiltrado.nombre);
-  
-    if (productoExistente) {
-      productoExistente.cantidad++;
-    } else {
-      productoFiltrado.cantidad = 1;
-      carritoCompras.push(productoFiltrado);
-    }
+  const productoFiltrado = productosFiltrados[indice];
+  const productoExistente = carritoCompras.find((item) => item.id === productoFiltrado.id);
+
+  if (productoExistente) {
+    productoExistente.cantidad++;
+  } else {
+    productoFiltrado.cantidad = 1;
+    carritoCompras.push(productoFiltrado);
+  }
 
   actualizarTotal();
 
