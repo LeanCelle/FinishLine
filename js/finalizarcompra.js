@@ -37,7 +37,7 @@ let productos = [
   {id: 35, nombre: "Campera Nike Sportswear Icon Clash Windrunner Nena", marca: "Nike", precio: 28999, talle: "L", prenda: "Campera", imagen: "../img/campera-azul-dibujos.jpg", seccion: "niños"}, 
   {id: 36, nombre: "Campera Topper Br Puffer II", marca: "Topper", precio: 28979, talle: "L", prenda: "Campera", imagen: "../img/campera-canelones-ninos.jpg", seccion: "niños"},
   {id: 37, nombre: "Remera adidas B Club 3 Tiras", marca: "Adidas", precio: 33099, talle: "S", prenda: "Remera", imagen: "../img/remera-adidas-ninos.jpg", seccion: "niños"},
-  {id: 38, nombre: "Remera Gilbert Térmica Infantil", marca: "Under Armour", precio: 8999, talle: "M", prenda: "Remera", imagen: "../img/termica-blanca-ninos.jpg", seccion: "niños"},
+  {id: 38, nombre: "Remera Gilbert Térmica Infantil", marca: "Gilbert", precio: 8999, talle: "M", prenda: "Remera", imagen: "../img/termica-blanca-ninos.jpg", seccion: "niños"},
   {id: 39, nombre: "Remera Fila Animal", marca: "Fila", precio: 5350, talle: "M", prenda: "Remera", imagen: "../img/remera-fila-ninos.jpg", seccion: "niños"},
   {id: 40, nombre: "Bermuda Topper Rtc", marca: "Topper", precio: 7199, talle: "L", prenda: "Bermuda", imagen: "../img/bermuda-topper-rosa.jpg", seccion: "niños"},
   {id: 41, nombre: "Bikini Hydro Painting", marca: "Hydro", precio: 7599, talle: "S", prenda: "Malla", imagen: "../img/malla-ninos.jpg", seccion: "niños"},
@@ -48,6 +48,26 @@ let productos = [
   {id: 46, nombre: "Zapatillas Puma Rebound Layup", marca: "Puma", precio: 26199, talle: "22", prenda: "Zapatillas", imagen: "../img/zapatillas-puma-ninos.jpg", seccion: "niños"},
   {id: 47, nombre: "Zapatillas Puma Wired Run", marca: "Puma", precio: 13199, talle: "23", prenda: "Zapatillas", imagen: "../img/zapatillas-puma-azul-ninos.jpg", seccion: "niños"},
   {id: 48, nombre: "Zapatillas de Running Nike Star Runner 3 Mujer", marca: "Nike", precio: 26999, talle: "23", prenda: "Zapatillas", imagen: "../img/zapatillas-nike-celestes-ninos.jpg", seccion: "niños"},
+  {id: 49, nombre: "Camperón Independiente Puma", marca: "Puma", precio: 43999, talle: "L", prenda: "Campera", imagen: "../img/camperon-independiente.jpg", seccion: "clubes"},
+  {id: 50, nombre: "Campera De Independiente Puma Entrenamiento Roja", marca: "Puma", precio: 19319, talle: "M", prenda: "Campera", imagen: "../img/campera-independiente.jpg", seccion: "clubes"},
+  {id: 51, nombre: "Camiseta De Independiente Puma Oficial Roja", marca: "Puma", precio: 9369, talle: "M", prenda: "Remera", imagen: "../img/camiseta-independiente.jpg", seccion: "clubes"}, 
+  {id: 52, nombre: "Pantalón De Independiente Puma Pro Entrenamiento Negro", marca: "Puma", precio: 10649, talle: "S", prenda: "Pantalon", imagen: "../img/pantalon-independiente.jpg", seccion: "clubes"},
+  {id: 53, nombre: "Conjunto De Boca Adidas Azul", marca: "Adidas", precio: 44440, talle: "L", prenda: "Campera", imagen: "../img/conjunto-boca.jpg", seccion: "clubes"},
+  {id: 54, nombre: "Camiseta De Boca Adidas Tercer Recambio Authentic Azul", marca: "Adidas", precio: 15399, talle: "S", prenda: "Remera", imagen: "../img/camiseta-boca.jpg", seccion: "clubes"},
+  {id: 55, nombre: "Camperón De Abrigo Boca Adidas Azul", marca: "Adidas", precio: 59999, talle: "XL", prenda: "Campera", imagen: "../img/camperon-boca.jpg", seccion: "clubes"},
+  {id: 56, nombre: "Pantalón Adidas Boca Juniors Entrenamiento Mujer Azul", marca: "Adidas", precio: 17749, talle: "L", prenda: "Pantalon", imagen: "../img/pantalon-boca.jpg", seccion: "clubes"},
+  {id: 57, nombre: "Camiseta De River Adidas Oficial Campeón Blanca", marca: "Adidas", precio: 24999, talle: "S", prenda: "Remera", imagen: "../img/camiseta-river.jpg", seccion: "clubes"},
+  {id: 58, nombre: "Pantalon De River Adidas Entrenamiento 22 Niño Verde", marca: "Adidas", precio: 24440, talle: "S", prenda: "Pantalon", imagen: "../img/pantalon-river.jpg", seccion: "clubes"},
+  {id: 59, nombre: "Ojota De River Adidas Adilette Shower Blanca", marca: "Adidas", precio: 12999, talle: "41", prenda: "Ojota", imagen: "../img/ojotas-river.jpg", seccion: "clubes"},
+  {id: 60, nombre: "Camiseta De River Adidas Alternativa Authentic Negra", marca: "Adidas", precio: 34999, talle: "M", prenda: "Remera", imagen: "../img/camiseta-alternativa-river.jpg", seccion: "clubes"},
+  {id: 61, nombre: "Camiseta Fútbol Nike Titular San Lorenzo 2023 Hombre", marca: "Nike", precio: 24999, talle: "L", prenda: "Remera", imagen: "../img/camiseta-titular-sanlorenzo.webp", seccion: "clubes"},
+  {id: 62, nombre: "Camiseta De San Lorenzo Nike Alternativa Niño Blanca", marca: "Nike", precio: 25999, talle: "S", prenda: "Remera", imagen: "../img/camiseta-sanlorenzo.jpg", seccion: "clubes"},
+  {id: 63, nombre: "Camiseta Nike 3° Edicion", marca: "Nike", precio: 24999, talle: "M", prenda: "Remera", imagen: "../img/remera-negra-sanlorenzo.avif", seccion: "clubes"},
+  {id: 64, nombre: "Campera Nike Park20 San Lorenzo", marca: "Nike", precio: 19999, talle: "L", prenda: "Campera", imagen: "../img/campera-sanlorenzo.avif", seccion: "clubes"},
+  {id: 65, nombre: "Camiseta De Racing Kappa Alternativa Azul", marca: "Kappa", precio: 9699, talle: "M", prenda: "Remera", imagen: "../img/camiseta-racing.jpg", seccion: "clubes"},
+  {id: 66, nombre: "Camiseta De Racing Kappa Tercer Recambio Slim Blanca", marca: "Kappa", precio: 9699, talle: "S", prenda: "Remera", imagen: "../img/camiseta-blanca-racing.jpg", seccion: "clubes"},
+  {id: 67, nombre: "Short De Racing Kappa Unisex Blanco", marca: "Kappa", precio: 8299, talle: "S", prenda: "Short", imagen: "../img/short-racing.jpg", seccion: "clubes"},
+  {id: 68, nombre: "Pechera De Racing Kappa Entrenamiento Amarilla", marca: "Kappa", precio: 7099, talle: "L", prenda: "Remera", imagen: "../img/pechera-racing.jpg", seccion: "clubes"},
 ]
     
   // Carrito
@@ -63,7 +83,11 @@ function actualizarTotal() {
       totalCompra += 999;
     }
   
-    if (descuento === "SOYLEANDRO") {
+    if (totalCompra === 999) {
+      totalCompra = 0;
+    }
+  
+    if (descuento === "SOYLEAN") {
       const descuentoAplicado = totalCompra * 0.15;
       totalCompra -= descuentoAplicado;
     }
@@ -274,8 +298,15 @@ terminoCompra.addEventListener("click", () => {
       'Recibirá su producto dentro de las 72hs hábiles!',
       'success'
     );
+    // Vaciar el carrito
+    carritoCompras = [];
+    guardarCarritoEnLocalStorage();
+    actualizarCarritoEnPantalla();
+    
+    window.location.href = "../index.html";
   }
 });
+
 
 
 

@@ -600,6 +600,19 @@ a.a-FinalizarCompra button#finalizarCompra {
   padding: 1rem;
 }
 
+span#contadorCarrito {
+  font-weight: bold;
+}
+
+p.carritoVacio {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 div.cancha-verde {
   background-image: url(../img/cancha-verde-adidas.webp);
   background-size: 100% 100%;
@@ -665,22 +678,12 @@ input.inputform {
   font-family: Inconsolata;
 }
 
-button#terminoCompra {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  display: block;
-  padding: 1rem 3rem;
-  margin: 3rem auto;
-  font-size: 2rem;
-  border: none;
+section.finalizar-compra-bg {
+  background-color: #f6f6f6;
+  padding: 2rem 0rem;
+  margin: 2rem 0rem 0rem 0rem;
 }
-
-p.codigo-descuento {
-  text-align: center;
-  font-size: 2rem;
-}
-
-input#descuento {
+section.finalizar-compra-bg input#descuento {
   text-align: center;
   margin: 2rem auto;
   display: flex;
@@ -691,6 +694,25 @@ input#descuento {
   box-shadow: inset 0 1px 4px hsla(0, 0%, 0%, 0.2);
   border-radius: 5px;
   font-family: Inconsolata;
+}
+section.finalizar-compra-bg p.codigo-descuento {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.7rem;
+}
+section.finalizar-compra-bg button#terminoCompra {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  display: block;
+  padding: 1rem 3rem;
+  margin: 1rem auto auto auto;
+  font-size: 2rem;
+  border: none;
+}
+section.finalizar-compra-bg button#terminoCompra:hover {
+  transform: 1.05;
+  transition: 2s;
+  background-color: rgb(95, 255, 95);
 }
 
 /*--------------------

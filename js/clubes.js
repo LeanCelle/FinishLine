@@ -12,13 +12,13 @@ fetch("../data.json")
   .then((res) => res.json())
   .then((data) => {
     productos = data;
-    productosFiltrados = productos.filter((producto, indice) => indice >= 32);
+    productosFiltrados = productos.filter((producto, indice) => indice >= 49);
     mostrarTodos(); // Mostrar todos los productos al cargar la página
   })
 
 // Crear tarjeta
 function crearTarjeta(producto, indice) {
-  if (!producto || producto.seccion !== "niños") {
+  if (!producto || producto.seccion !== "clubes") {
     return null;
   }
 
@@ -40,7 +40,7 @@ function mostrarTodos() {
   contenedor.innerHTML = "";
 
   const productosMostrados = productos.filter(
-    (producto) => producto.seccion === "niños"
+    (producto) => producto.seccion === "clubes"
   );
 
   productosMostrados.forEach((producto, indice) => {
@@ -50,64 +50,55 @@ function mostrarTodos() {
     }
   });
 }
-  
-    
+
 // Filtro productos por marca
 function filtrarPorMarca(marca) {
-  const contenedor = document.getElementById("container");
   contenedor.innerHTML = "";
 
-  const filtroMarca = productosFiltrados.filter((p) => p.marca === marca && p.seccion === "niños");
+  const filtroMarca = productos.filter(
+    (p) => p.marca === marca && p.seccion === "clubes"
+  );
+
   filtroMarca.forEach((producto) => {
-    const indice = productosFiltrados.indexOf(producto);
+    const indice = productos.indexOf(producto);
     const card = crearTarjeta(producto, indice);
-    contenedor.appendChild(card);
+    if (card) {
+      contenedor.appendChild(card);
+    }
   });
 }
-    
+  
   // Agrego eventos de click a los elementos <h5> de los filtros
   const filtroNike = document.getElementById("filtro-nike");
   const filtroAdidas = document.getElementById("filtro-adidas");
   const filtroPuma = document.getElementById("filtro-puma");
-  const filtroTopper = document.getElementById("filtro-topper");
-  const filtroAtomik = document.getElementById("filtro-atomik");
-  const filtroFila = document.getElementById("filtro-fila");
-  const filtroGilbert = document.getElementById("filtro-gilbert");
-  const filtroHydro = document.getElementById("filtro-hydro");
+  const filtroKappa = document.getElementById("filtro-kappa");
   
-  
-    
   filtroNike.addEventListener("click", () => filtrarPorMarca("Nike"));
   filtroAdidas.addEventListener("click", () => filtrarPorMarca("Adidas"));
   filtroPuma.addEventListener("click", () => filtrarPorMarca("Puma"));
-  filtroTopper.addEventListener("click", () => filtrarPorMarca("Topper"));
-  filtroAtomik.addEventListener("click", () => filtrarPorMarca("Atomik"));
-  filtroFila.addEventListener("click", () => filtrarPorMarca("Fila"));
-  filtroGilbert.addEventListener("click", () => filtrarPorMarca("Gilbert"));
-  filtroHydro.addEventListener("click", () => filtrarPorMarca("Hydro"));
+  filtroKappa.addEventListener("click", () => filtrarPorMarca("Kappa"));
   
+  // Mostrar todos los productos
+  function mostrarTodos() {
+    const contenedor = document.getElementById("container");
+    contenedor.innerHTML = "";
   
-    
-// Mostrar todos los productos
-function mostrarTodos() {
-  const contenedor = document.getElementById("container");
-  contenedor.innerHTML = "";
-
-  const productosMostrados = productos.filter((producto) => producto.seccion === "niños");
-
-  productosMostrados.forEach((producto, indice) => {
-    const card = crearTarjeta(producto, indice);
-    contenedor.appendChild(card);
-  });
-}
-    
+    const productosMostrados = productosFiltrados.filter((producto) => producto.seccion === "clubes");
+  
+    productosMostrados.forEach((producto, indice) => {
+      const card = crearTarjeta(producto, indice);
+      contenedor.appendChild(card);
+    });
+  }
+  
   // Agregar evento de clic al elemento <h5> del botón de eliminar filtros
   const eliminarFiltros = document.getElementById("eliminar-filtros");
   eliminarFiltros.addEventListener("click", mostrarTodos);
-    
+  
   // Mostrar todos los productos al cargar la página
   window.addEventListener("load", mostrarTodos);
-    
+  
   // Actualizar el precio total de la compra
   function actualizarTotal() {
     const envio = document.querySelector("#envio");
@@ -136,11 +127,11 @@ function mostrarTodos() {
     const totalProductos = carritoCompras.reduce((acc, producto) => acc + producto.cantidad, 0);
     contador.textContent = totalProductos;
   }
-    
+  
   // Agregar producto al carrito
   function agregarAlCarrito(indice) {
     const productoFiltrado = productosFiltrados[indice];
-    const productoExistente = carritoCompras.find((item) => item.id === productoFiltrado.id);
+    const productoExistente = carritoCompras.find((item) => item.nombre === productoFiltrado.nombre);
   
     if (productoExistente) {
       productoExistente.cantidad++;
@@ -150,7 +141,6 @@ function mostrarTodos() {
     }
   
     actualizarTotal();
-  
   
     Toastify({
       text: "Producto añadido al carrito",
@@ -174,23 +164,21 @@ function mostrarTodos() {
     actualizarContadorCarrito();
   }
   
-  
-    
   // Guardar carrito en el almacenamiento local
   function guardarCarritoEnLocalStorage() {
-      localStorage.setItem("carrito", JSON.stringify(carritoCompras));
+    localStorage.setItem("carrito", JSON.stringify(carritoCompras));
   }
-    
+  
   // Cargar carrito del almacenamiento local al cargar la página
   window.addEventListener("load", () => {
-      const carritoGuardado = localStorage.getItem("carrito");
-      if (carritoGuardado) {
-        carritoCompras = JSON.parse(carritoGuardado);
-        actualizarCarritoEnPantalla();
-        actualizarContadorCarrito();
-      }
+    const carritoGuardado = localStorage.getItem("carrito");
+    if (carritoGuardado) {
+      carritoCompras = JSON.parse(carritoGuardado);
+      actualizarCarritoEnPantalla();
+      actualizarContadorCarrito();
+    }
   });
-    
+  
   // Actualizar la vista del carrito
   function actualizarCarritoEnPantalla() {
     const carrito = document.querySelector(".carritoAgregado");
@@ -215,6 +203,8 @@ function mostrarTodos() {
     }
   }
   
+  
+  
     
   // Eliminar producto del carrito
   function eliminarDelCarrito(indice) {
@@ -230,41 +220,39 @@ function mostrarTodos() {
       actualizarCarritoEnPantalla();
       actualizarContadorCarrito()
   }
-
-
-  // Filtro barra de búsqueda
-const barraBusqueda = document.querySelector("#barraBusqueda");
-
-function busqueda(prenda) {
-  const contenedor = document.getElementById("container");
-  contenedor.innerHTML = "";
   
-  const filtroMarca = productosFiltrados.filter((p) => p.prenda === prenda && p.seccion === "niños");
-  filtroMarca.forEach((producto) => {
-    const indice = productosFiltrados.indexOf(producto);
-    const card = crearTarjeta(producto, indice);
-    contenedor.appendChild(card);
-  });
-}
-
-barraBusqueda.addEventListener("input", () => {
-  const valor = barraBusqueda.value.toLowerCase();
-  if (valor === "remera") {
-    busqueda("Remera");
-  } else if (valor === "pantalon") {
-    busqueda("Pantalon");
-  } else if (valor === "campera") {
-    busqueda("Campera");
-  } else if (valor === "zapatillas") {
-    busqueda("Zapatillas");
-  } else if (valor === "bermuda") {
-    busqueda("Bermuda");
-  } else if (valor === "malla") {
-    busqueda("Malla");
-  } else if (valor === "calza") {
-    busqueda("Calza");
+  
+  const barraBusqueda = document.querySelector("#barraBusqueda");
+  
+  function busqueda(prenda) {
+    const contenedor = document.getElementById("container");
+    contenedor.innerHTML = "";
+    
+    const filtroMarca = productosFiltrados.filter((p) => p.prenda === prenda && p.seccion === "clubes");
+    filtroMarca.forEach((producto) => {
+      const indice = productosFiltrados.indexOf(producto);
+      const card = crearTarjeta(producto, indice);
+      contenedor.appendChild(card);
+    });
   }
-});
+  
+  barraBusqueda.addEventListener("input", () => {
+    const valor = barraBusqueda.value.toLowerCase();
+    if (valor === "remera") {
+      busqueda("Remera");
+    } else if (valor === "pantalon") {
+      busqueda("Pantalon");
+    } else if (valor === "campera") {
+      busqueda("Campera");
+    } else if (valor === "ojota") {
+      busqueda("Ojota");
+    } else if (valor === "short") {
+      busqueda("Short");
+    }
+  });
+  
+  
+  
   
   
   // Inicio de sesion o registrate
@@ -278,4 +266,5 @@ barraBusqueda.addEventListener("input", () => {
     inputIndex.innerHTML = `<p class="usuarioIndex">INGRESA O REGISTRATE</p>`;
   } else {
     inputIndex.innerHTML = `<p class="usuarioIndex">${nombreUsuario}</p>`;
+  
   }

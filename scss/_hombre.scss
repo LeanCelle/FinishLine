@@ -178,3 +178,16 @@ a.a-FinalizarCompra {
         padding: 1rem;
     }
 }
+
+span#contadorCarrito {
+    font-weight: bold;
+}
+
+p.carritoVacio {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    text-align: center;
+}
