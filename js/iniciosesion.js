@@ -30,11 +30,6 @@ form.appendChild(pTwo)
 form.appendChild(inputTwo)
 form.appendChild(button)
 
-
-
-
-
-
 button.addEventListener("click", () => {
     if (inputOne.value === "" || inputTwo.value === "") {
       Swal.fire({

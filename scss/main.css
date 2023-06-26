@@ -523,19 +523,20 @@ section#sectionGlobal section#container {
   margin-bottom: 10rem;
 }
 section#sectionGlobal section#container div.divProductos-1 {
+  display: flex;
+  flex-direction: column;
   box-shadow: 0rem 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.071);
 }
 section#sectionGlobal section#container div.divProductos-1:hover {
   transition: 1s;
   transform: scale(1.01);
 }
-
-a.boton {
+section#sectionGlobal section#container div.divProductos-1 a.boton {
   background-color: black;
   border-color: white;
   font-size: 1rem;
 }
-a.boton:hover {
+section#sectionGlobal section#container div.divProductos-1 a.boton:hover {
   transition: 1s;
   background-color: rgb(219, 219, 219);
   border-color: white;
@@ -545,7 +546,7 @@ a.boton:hover {
 div.divProdAgregados {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 5rem;
 }
@@ -590,7 +591,7 @@ a.a-FinalizarCompra {
 }
 a.a-FinalizarCompra button#finalizarCompra {
   color: white;
-  background-color: rgba(0, 255, 8, 0.588);
+  background-color: rgba(44, 218, 0, 0.616);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -656,6 +657,7 @@ div.logo-clubes {
 }
 div.logo-clubes img.clubes {
   width: 10rem;
+  cursor: pointer;
 }
 
 h1.h1FinalizarCompra {

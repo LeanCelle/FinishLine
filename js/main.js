@@ -1,5 +1,5 @@
 let productos = [];
-let productosFiltrados = []; // Agrega la declaración de productosFiltrados aquí
+let productosFiltrados = [];
 
 // Carrito
 let carritoCompras = [];
@@ -8,13 +8,21 @@ let carritoCompras = [];
 const contenedor = document.getElementById("container");
 
 // Cargar productos desde el archivo JSON
-fetch("../data.json")
-  .then((res) => res.json())
-  .then((data) => {
+async function obtenerDatos() {
+  try {
+    const res = await fetch("../data.json");
+    const data = await res.json();
+    
     productos = data;
     productosFiltrados = productos.filter((producto, indice) => indice >= 0);
-    mostrarTodos(); // Mostrar todos los productos al cargar la página
-  })
+    
+    mostrarTodos();
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+obtenerDatos();
 
 // Crear tarjeta
 function crearTarjeta(producto, indice) {
@@ -35,22 +43,6 @@ function crearTarjeta(producto, indice) {
   return card;
 }
 
-// Mostrar todos los productos
-function mostrarTodos() {
-  contenedor.innerHTML = "";
-
-  const productosMostrados = productos.filter(
-    (producto) => producto.seccion === "clubes"
-  );
-
-  productosMostrados.forEach((producto, indice) => {
-    const card = crearTarjeta(producto, indice);
-    if (card) {
-      contenedor.appendChild(card);
-    }
-  });
-}
-
   
 // Filtro productos por marca
 function filtrarPorMarca(marca) {
@@ -67,11 +59,11 @@ function filtrarPorMarca(marca) {
 
   
 // Agrego eventos de click a los filtros
-const filtroNike = document.getElementById("filtro-nike");
-const filtroAdidas = document.getElementById("filtro-adidas");
-const filtroPuma = document.getElementById("filtro-puma");
-const filtroCanterbury = document.getElementById("filtro-canterbury");
-const filtroUnderArmour = document.getElementById("filtro-underArmour");
+const filtroNike = document.querySelector("#filtro-nike");
+const filtroAdidas = document.querySelector("#filtro-adidas");
+const filtroPuma = document.querySelector("#filtro-puma");
+const filtroCanterbury = document.querySelector("#filtro-canterbury");
+const filtroUnderArmour = document.querySelector("#filtro-underArmour");
 
   
 filtroNike.addEventListener("click", () => filtrarPorMarca("Nike"));
@@ -158,9 +150,11 @@ function agregarAlCarrito(indice) {
         position: "left", // `left`, `center` or `right`
         stopOnFocus: true, // Prevents dismissing of toast on hover
         style: {
-            color: "black",
+            color: "white",
+            //background: "rgba(0, 0, 0, 0.232)",
+            background: "rgba(0, 0, 0, 0.621)",
             //background: "rgba(17, 255, 0, 0.441)",
-            background: "rgba(0, 0, 0, 0.068)",
+            //background: "rgba(0, 0, 0, 0.068)",
             fontSize: "1.5rem",
         },
         onClick: function(){} // Callback after click
@@ -209,6 +203,8 @@ function actualizarCarritoEnPantalla() {
     actualizarTotal();
   }
 }
+
+
 
 
   

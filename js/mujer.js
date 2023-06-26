@@ -1,5 +1,5 @@
 let productos = [];
-let productosFiltrados = []; // Agrega la declaración de productosFiltrados aquí
+let productosFiltrados = [];
 
 // Carrito
 let carritoCompras = [];
@@ -8,13 +8,21 @@ let carritoCompras = [];
 const contenedor = document.getElementById("container");
 
 // Cargar productos desde el archivo JSON
-fetch("../data.json")
-  .then((res) => res.json())
-  .then((data) => {
+async function obtenerDatos() {
+  try {
+    const res = await fetch("../data.json");
+    const data = await res.json();
+    
     productos = data;
     productosFiltrados = productos.filter((producto, indice) => indice >= 16);
-    mostrarTodos(); // Mostrar todos los productos al cargar la página
-  })
+    
+    mostrarTodos();
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+obtenerDatos();
 
 // Crear tarjeta
 function crearTarjeta(producto, indice) {
@@ -35,22 +43,6 @@ function crearTarjeta(producto, indice) {
   return card;
 }
 
-// Mostrar todos los productos
-function mostrarTodos() {
-  contenedor.innerHTML = "";
-
-  const productosMostrados = productos.filter(
-    (producto) => producto.seccion === "mujer"
-  );
-
-  productosMostrados.forEach((producto, indice) => {
-    const card = crearTarjeta(producto, indice);
-    if (card) {
-      contenedor.appendChild(card);
-    }
-  });
-}
-
 // Filtro productos por marca
 function filtrarPorMarca(marca) {
   const contenedor = document.getElementById("container");
@@ -65,12 +57,12 @@ function filtrarPorMarca(marca) {
 }
 
 // Agrego eventos de click a los elementos <h5> de los filtros
-const filtroNike = document.getElementById("filtro-nike");
-const filtroAdidas = document.getElementById("filtro-adidas");
-const filtroPuma = document.getElementById("filtro-puma");
-const filtroTopper = document.getElementById("filtro-topper");
-const filtroLotto = document.getElementById("filtro-lotto");
-const filtroFila = document.getElementById("filtro-fila");
+const filtroNike = document.querySelector("#filtro-nike");
+const filtroAdidas = document.querySelector("#filtro-adidas");
+const filtroPuma = document.querySelector("#filtro-puma");
+const filtroTopper = document.querySelector("#filtro-topper");
+const filtroLotto = document.querySelector("#filtro-lotto");
+const filtroFila = document.querySelector("#filtro-fila");
 
 filtroNike.addEventListener("click", () => filtrarPorMarca("Nike"));
 filtroAdidas.addEventListener("click", () => filtrarPorMarca("Adidas"));
@@ -152,8 +144,9 @@ function agregarAlCarrito(indice) {
     position: "left",
     stopOnFocus: true,
     style: {
-      color: "black",
-      background: "rgba(0, 0, 0, 0.068)",
+      color: "white",
+      background: "rgba(0, 0, 0, 0.621)",
+      //background: "rgba(0, 0, 0, 0.068)",
       fontSize: "1.5rem",
     },
     onClick: function () {},

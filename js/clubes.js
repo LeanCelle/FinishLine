@@ -1,5 +1,5 @@
 let productos = [];
-let productosFiltrados = []; // Agrega la declaración de productosFiltrados aquí
+let productosFiltrados = [];
 
 // Carrito
 let carritoCompras = [];
@@ -8,13 +8,22 @@ let carritoCompras = [];
 const contenedor = document.getElementById("container");
 
 // Cargar productos desde el archivo JSON
-fetch("../data.json")
-  .then((res) => res.json())
-  .then((data) => {
-    productos = data;
-    productosFiltrados = productos.filter((producto, indice) => indice >= 48);
-    mostrarTodos(); // Mostrar todos los productos al cargar la página
-  })
+async function obtenerDatos() {
+    try {
+        const res = await fetch("../data.json");
+        const data = await res.json();
+      
+        productos = data;
+        productosFiltrados = productos.filter((producto, indice) => indice >= 48);
+      
+        mostrarTodos();
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+obtenerDatos();
+  
 
 // Crear tarjeta
 function crearTarjeta(producto, indice) {
@@ -35,22 +44,6 @@ function crearTarjeta(producto, indice) {
   return card;
 }
 
-// Mostrar todos los productos
-function mostrarTodos() {
-  contenedor.innerHTML = "";
-
-  const productosMostrados = productos.filter(
-    (producto) => producto.seccion === "clubes"
-  );
-
-  productosMostrados.forEach((producto, indice) => {
-    const card = crearTarjeta(producto, indice);
-    if (card) {
-      contenedor.appendChild(card);
-    }
-  });
-}
-
 // Filtro productos por marca
 function filtrarPorMarca(marca) {
     const contenedor = document.getElementById("container");
@@ -65,10 +58,10 @@ function filtrarPorMarca(marca) {
   }
   
   // Agrego eventos de click a los elementos <h5> de los filtros
-  const filtroNike = document.getElementById("filtro-nike");
-  const filtroAdidas = document.getElementById("filtro-adidas");
-  const filtroPuma = document.getElementById("filtro-puma");
-  const filtroKappa = document.getElementById("filtro-kappa");
+  const filtroNike = document.querySelector("#filtro-nike");
+  const filtroAdidas = document.querySelector("#filtro-adidas");
+  const filtroPuma = document.querySelector("#filtro-puma");
+  const filtroKappa = document.querySelector("#filtro-kappa");
   
   filtroNike.addEventListener("click", () => filtrarPorMarca("Nike"));
   filtroAdidas.addEventListener("click", () => filtrarPorMarca("Adidas"));
@@ -148,8 +141,9 @@ function filtrarPorMarca(marca) {
       position: "left",
       stopOnFocus: true,
       style: {
-        color: "black",
-        background: "rgba(0, 0, 0, 0.068)",
+        color: "white",
+        background: "rgba(0, 0, 0, 0.621)",
+        //background: "rgba(0, 0, 0, 0.068)",
         fontSize: "1.5rem",
       },
       onClick: function () {},
@@ -246,6 +240,31 @@ function filtrarPorMarca(marca) {
       busqueda("Short");
     }
   });
+
+  function filtrarClub(club) {
+    const contenedor = document.getElementById("container");
+    contenedor.innerHTML = "";
+  
+    const filtroMarca = productosFiltrados.filter((p) => p.club === club && p.seccion === "clubes");
+    filtroMarca.forEach((producto) => {
+      const indice = productosFiltrados.indexOf(producto);
+      const card = crearTarjeta(producto, indice);
+      contenedor.appendChild(card);
+    });
+  }
+  
+  // Agrego eventos de click a los elementos <h5> de los filtros
+  const filtroBoca = document.querySelector("#boca");
+  const filtroRiver = document.querySelector("#river");
+  const filtroIndependiente = document.querySelector("#independiente");
+  const filtroRacing = document.querySelector("#racing");
+  const filtroSanLorenzo = document.querySelector("#sanLorenzo");
+  
+  filtroBoca.addEventListener("click", () => filtrarClub("boca"));
+  filtroRiver.addEventListener("click", () => filtrarClub("river"));
+  filtroIndependiente.addEventListener("click", () => filtrarClub("independiente"));
+  filtroRacing.addEventListener("click", () => filtrarClub("racing"));
+  filtroSanLorenzo.addEventListener("click", () => filtrarClub("san lorenzo"));
   
   
   
